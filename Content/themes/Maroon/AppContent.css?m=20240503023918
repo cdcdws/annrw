@@ -1,0 +1,318 @@
+/*AppContent*/
+/*Theme: Blue*/
+.leftTable, .topTable {
+	background-color: var(--default_back_color);
+	border-color: var(--darkNeutral_border_color);
+}
+
+.rightDetails, .bottomDetails {
+	background-color: var(--default_back_color);
+	border-color: var(--darkNeutral_border_color);
+}
+
+#splitter, #hsplitter {
+	border-left-color: var(--mediumNeutral_border_color);
+	border-right-color: var(--mediumNeutral_border_color);
+	border-top-color: var(--mediumNeutral_border_color);
+	border-bottom-color: var(--mediumNeutral_border_color);
+}
+
+.splitterLeftPanel, .splitterTopPanel {
+	background-color: var(--default_back_color);
+	border-top-color: var(--mediumNeutral_border_color);
+	border-bottom-color: var(--mediumNeutral_border_color);
+	border-left-color: var(--mediumNeutral_border_color);
+	border-right-color: var(--mediumNeutral_border_color);
+}
+
+.splitterRightPanel, .splitterBottomPanel {
+	background-color: var(--default_back_color);
+	border-top-color: var(--mediumNeutral_border_color);
+	border-bottom-color: var(--mediumNeutral_border_color);
+	border-left-color: var(--mediumNeutral_border_color);
+	border-right-color: var(--mediumNeutral_border_color);
+}
+
+.splitterTopBorder {
+	background-color: var(--lightNeutral_back_color);
+	border-top-color: var(--lightHighlight_border_color);
+}
+
+.vsplitbar {
+	background-color: var(--lightNeutral_back_color);
+	border-left-color: var(--darkNeutral_border_color);
+	border-right-color: var(--darkNeutral_border_color);
+}
+
+.hsplitbar {
+	background-color: var(--lightNeutral_back_color);
+	border-top-color: var(--darkNeutral_border_color);
+	border-bottom-color: var(--darkNeutral_border_color);
+}
+
+	.vsplitbar.active, .vsplitbar:hover, .hsplitbar.active, .hsplitbar:hover {
+		background-color: var(--mediumHighlight_back_color);
+	}
+
+.appBody {
+	background-color: var(--lightNeutral_back_color);
+}
+
+.appTableHeader {
+	background-color: var(--mediumNeutral_back_color);
+	color: var(--mediumNeutral_text_color);
+	border-color: var(--mediumNeutral_border_color);
+}
+
+.appButtonBar {
+	background-color: var(--appbuttonbar_back_color);
+	border-top-color: var(--appbuttonbar_border_color);
+	border-bottom-color: var(--appbuttonbar_border_color);
+}
+
+.appMenuBar {
+	background-color: var(--lightNeutral_back_color);
+	border-top-color: var(--default_almost_white_color);
+	border-bottom-color: var(--lightHighlight_border_color);
+}
+
+.appEditArea {
+	background-color: var(--default_back_color);
+	border-top-color: var(--lightHighlight_border_color);
+	border-right-color: var(--lightHighlight_border_color);
+	border-bottom-color: var(--lightHighlight_border_color);
+	border-left-color: var(--lightHighlight_border_color);
+}
+
+.DnDrowDragClass {
+	background-color: var(--lightHighlight_back_color);
+}
+
+
+/*
+------------------------------------------------
+Background Color Classes 
+08/09/2022 SGY Made the color classes in appcontent !important so they can be used to override the standard colors for listtbl.
+------------------------------------------------
+*/
+
+.darkHighlight {
+	background-color: var(--darkHighlight_back_color) !important;
+	color: var(--darkHighlight_text_color) !important;
+}
+
+.mediumHighlight {
+	background-color: var(--mediumHighlight_back_color) !important;
+	color: var(--mediumHighlight_text_color) !important;
+}
+
+.lightHighlight {
+	background-color: var(--lightHighlight_back_color) !important;
+	color: var(--lightHighlight_text_color) !important;
+}
+
+.darkNeutral {
+	background-color: var(--darkNeutral_back_color) !important;
+	color: var(--darkNeutral_text_color) !important;
+}
+
+.mediumNeutral {
+	background-color: var(--mediumNeutral_back_color) !important;
+	color: var(--mediumNeutral_text_color) !important;
+}
+
+.lightNeutral {
+	background-color: var(--lightNeutral_back_color) !important;
+	color: var(--lightNeutral_text_color) !important;
+}
+
+.panelNeutral {
+	background-color: var(--panelNeutral_back_color);
+	color: var(--panelNeutral_text_color);
+}
+
+/*
+------------------------------------------------
+Background Color Classes - non-important
+05/04/2023 JKM Added non-important versions for situations where we want a default, but intend to let the user override, such as mainpage widget headers.
+------------------------------------------------
+*/
+
+.darkHighlightNonImportant {
+	background-color: var(--darkHighlight_back_color);
+	color: var(--darkHighlight_text_color);
+}
+
+.mediumHighlightNonImportant {
+	background-color: var(--mediumHighlight_back_color);
+	color: var(--mediumHighlight_text_color);
+}
+
+.lightHighlightNonImportant {
+	background-color: var(--lightHighlight_back_color);
+	color: var(--lightHighlight_text_color);
+}
+
+.darkNeutralNonImportant {
+	background-color: var(--darkNeutral_back_color);
+	color: var(--darkNeutral_text_color);
+}
+
+.mediumNeutralNonImportant {
+	background-color: var(--mediumNeutral_back_color);
+	color: var(--mediumNeutral_text_color);
+}
+
+.lightNeutralNonImportant {
+	background-color: var(--lightNeutral_back_color);
+	color: var(--lightNeutral_text_color);
+}
+/*
+------------------------------------------------
+Border Color Classes
+------------------------------------------------
+*/
+
+.lightNeutralBorder {
+	border-color: var(--lightNeutral_border_color);
+}
+
+.mediumNeutralBorder {
+	border-color: var(--mediumNeutral_border_color);
+}
+
+.darkNeutralBorder {
+	border-color: var(--darkNeutral_border_color);
+}
+
+.lightHighlightBorder {
+	border-color: var(--lightHighlight_border_color);
+}
+
+.mediumHighlightBorder {
+	border-color: var(--mediumHighlight_border_color);
+}
+
+.darkHighlightBorder {
+	border-color: var(--darkHighlight_border_color);
+}
+
+/*
+------------------------------------------------
+Font Foreground Color Classes
+------------------------------------------------
+*/
+
+.darkHighlightColor {
+	color: var(--darkHighlight_color);
+}
+
+.mediumHighlightColor {
+	color: var(--mediumHighlight_color);
+}
+
+.lightHighlightColor {
+	color: var(--lightHighlight_color);
+}
+
+.darkNeutralColor {
+	color: var(--darkNeutral_color);
+}
+
+.mediumNeutralColor {
+	color: var(--mediumNeutral_color);
+}
+
+.lightNeutralColor {
+	color: var(--lightNeutral_color);
+}
+
+/*
+------------------------------------------------
+App Column Menu (Vertical)
+------------------------------------------------
+*/
+
+.appColumnMenu {
+	background-color: var(--mediumNeutral_back_color);
+	color: var(--mediumNeutral_text_color);
+}
+
+.ColumnMenu {
+	border-color: var(--mediumNeutral_border_color);
+}
+
+	.ColumnMenu ul {
+	}
+
+	.ColumnMenu li a {
+	}
+
+		.ColumnMenu li a:link, .ColumnMenu li a:visited {
+			border-top-color: var(--columnmenu_li_border_top_color);
+			border-right-color: var(--columnmenu_li_border_right_color);
+			border-bottom-color: var(--columnmenu_li_border_bottom_color);
+			border-left-color: var(--columnmenu_li_border_left_color);
+			background-color: var(--columnmenu_li_back_color);
+			color: var(--columnmenu_li_text_color);
+		}
+
+		.ColumnMenu li a:hover {
+			background-color: var(--columnmenu_li_hover_back_color);
+			color: var(--columnmenu_li_hover_text_color);
+			border-top-color: var(--columnmenu_li_hover_border_top_color);
+			border-right-color: var(--columnmenu_li_hover_border_right_color);
+			border-bottom-color: var(--columnmenu_li_hover_border_bottom_color);
+		}
+
+		.ColumnMenu li a:focus {
+		}
+
+	.ColumnMenu li.selected a {
+		background-color: var(--columnmenu_li_selected_back_color);
+		color: var(--columnmenu_li_selected_text_color);
+		border-top-color: var(--columnmenu_li_selected_border_top_color);
+		border-right-color: var(--columnmenu_li_selected_border_right_color);
+		border-bottom-color: var(--columnmenu_li_selected_border_bottom_color);
+	}
+
+		.ColumnMenu li.selected a.last {
+			border-bottom-color: var(--columnmenu_li_selected_border_bottom_color);
+		}
+
+/*
+------------------------------------------------
+Table Sorter 
+------------------------------------------------
+*/
+
+.header:hover {
+	background-color: var(--lightNeutral_back_color);
+	color: var(--lightNeutral_text_color);
+}
+
+/*
+------------------------------------------------
+Cafeteria ten-key button colors & gradients
+------------------------------------------------
+*/
+.tkKey-grad {
+	background-image: radial-gradient(circle, #426788 0%,#002556 100%);
+}
+
+.tkKey-flat {
+	background-color: var(--mediumHighlight_back_color);
+}
+
+.sp-picker-container {
+	background-color: var(--mediumNeutral_back_color);
+}
+
+.sp-palette-container {
+	background-color: var(--mediumNeutral_back_color);
+}
+
+/* PP Main Styles */
+.tblhdr2 {
+	color: var(--default_light_text_color);
+}
