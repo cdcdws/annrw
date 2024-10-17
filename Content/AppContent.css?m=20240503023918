@@ -1,0 +1,318 @@
+/*AppContent*/
+/* DO NOT DEFINE COLORS IN THIS STYLE SHEET. */
+/* COLORS ARE DEFINED IN THEMES */
+.leftTable {
+	float: none;
+	width: auto;
+	overflow: auto;
+	border-top: 1px solid;
+	border-bottom: 0px solid;
+	border-left: 1px solid;
+	border-right: 0px solid;
+}
+
+.topTable {
+	float: none;
+	height: auto;
+	overflow: auto;
+	border-top: 1px solid;
+	border-bottom: 0px solid;
+	border-left: 1px solid;
+	border-right: 0px solid;
+}
+
+.rightDetails {
+	margin-left: auto;
+	width: auto;
+	overflow: auto;
+	border-top: 1px solid;
+	border-bottom: 0px solid;
+	border-left: 0px solid;
+	border-right: 1px solid;
+}
+
+.bottomDetails {
+	margin-top: auto;
+	height: auto;
+	overflow: auto;
+	border-top: 0px solid;
+	border-bottom: 1px solid;
+	border-left: 0px solid;
+	border-right: 1px solid;
+}
+
+#splitter {
+	border-left: 0px solid;
+	border-right: 0px solid;
+	border-top: 0px solid;
+	border-bottom: 0px solid;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#hsplitter {
+	border-left: 0px solid;
+	border-right: 0px solid;
+	border-top: 0px solid;
+	border-bottom: 0px solid;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+/* Don't use.  It will set overflow for ALL divs in splitter (some we may not want)
+changed lefttable and rightdetails to specifically have overflow auto.
+#splitterX div {
+	overflow: auto;
+}
+*/
+.splitterLeftPanel {
+	float: none;
+	width: auto;
+	overflow: auto;
+	border-top: 1px solid;
+	border-bottom: 0px solid;
+	border-left: 1px solid;
+	border-right: 0px solid;
+}
+
+.splitterRightPanel {
+	margin-left: auto;
+	width: auto;
+	overflow: auto;
+	border-top: 1px solid;
+	border-bottom: 0px solid;
+	border-left: 0px solid;
+	border-right: 1px solid;
+}
+
+.splitterTopBorder {
+	height: 6px;
+	border-top: 1px solid;
+	/*border-bottom: 1px solid;*/
+}
+
+/*Old Splitter (NEW splitter 1.63 CSS moved to jquery.splitter.css 8/17/2013 SGY)
+===========================================================================
+.vsplitbar {
+    background-position: center;
+    width: 5px;
+    background: url(../Images/vgrabber.gif) no-repeat center;
+    border-left: 1px solid;
+    border-right: 1px solid;
+}
+.hsplitbar {
+    background-position: center;
+    height: 5px;
+    background: url(../Images/hgrabber.gif) no-repeat center;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+.vsplitbar.active, .vsplitbar:hover {
+    background-position: center;
+    width: 5px;
+    background: url(../Images/vgrabber.gif) no-repeat center;
+}
+.hsplitbar.active, .hsplitbar:hover {
+    background-position: center;
+    height: 5px;
+    background: url(../Images/hgrabber.gif) no-repeat center;
+}
+===========================================================================*/
+
+/*
+------------------------------------------------
+App Column Menu (Vertical)
+------------------------------------------------
+*/
+
+.appColumnMenu {
+	float: left;
+	width: 150px;
+	height: 100%;
+}
+
+.ColumnMenu {
+	width: 150px;
+	margin-top: 0px;
+	border-style: none none none none;
+	border-width: 1px;
+}
+
+	.ColumnMenu ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.ColumnMenu li a {
+		height: 32px;
+		voice-family: "\"}\"";
+		voice-family: inherit;
+		height: 24px;
+		text-decoration: none;
+		font-weight: bold;
+		font-size: 0.9em;
+	}
+
+		.ColumnMenu li a:link, .ColumnMenu li a:visited {
+			display: block;
+			border-style: solid;
+			border-width: 1px;
+			padding: 8px 0 0 5px;
+		}
+
+		.ColumnMenu li a:hover {
+			border-top-style: solid;
+			border-right-style: solid;
+			border-bottom-style: solid;
+			border-top-width: 1px;
+			border-right-width: 1px;
+			border-bottom-width: 1px;
+			padding: 8px 0 0 5px;
+		}
+
+		.ColumnMenu li a:focus {
+			outline: none;
+		}
+
+	.ColumnMenu li.selected a {
+		border-top-style: solid;
+		border-right-style: solid;
+		border-bottom-style: solid;
+		border-top-width: 1px;
+		border-right-width: 1px;
+		border-bottom-width: 1px;
+		padding: 8px 10px 0 0;
+		text-align: right;
+	}
+
+		.ColumnMenu li.selected a.last {
+			border-bottom-style: solid;
+			border-bottom-width: 1px;
+		}
+
+/*
+------------------------------------------------
+Table Sorter 
+------------------------------------------------
+*/
+.header:hover {
+	cursor: pointer;
+}
+
+.headerSortUp {
+	background-image: url(../images/asc.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+}
+
+.headerSortDown {
+	background-image: url(../images/desc.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+}
+
+.appButtonBar {
+	border-style: solid none none none;
+	border-width: 1px;
+	width: 100%;
+}
+
+.appMenuBar {
+	border-style: solid none solid none;
+	border-width: 1px;
+	width: 100%;
+}
+
+.appEditArea {
+	overflow: auto;
+	border-style: solid;
+	border-left-width: 1px;
+	border-right-width: 1px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.appValidationError {
+	display: none;
+	width: 100%;
+}
+
+.validationSummary {
+	padding: 0px;
+	overflow: hidden;
+}
+
+	.validationSummary ul {
+		list-style: none;
+	}
+
+.cursorHand {
+	cursor: pointer;
+}
+
+.cursorArrow {
+	cursor: default;
+}
+
+/* ToolTips */
+
+.tooltip {
+	font-size: .9em;
+}
+
+	.tooltip table td {
+		padding: 5px;
+	}
+
+/* PP Main Styles */
+.tblhdr2 {
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.demoDetails {
+	overflow: auto;
+	position: relative;
+}
+
+p {
+	margin-top: 2px;
+	margin-bottom: 0;
+}
+
+.tr_action {
+	cursor: pointer;
+}
+
+.ShowAll_YES {
+	display: inline;
+}
+
+.ShowAll_NO {
+	display: none;
+}
+
+#linkbody ul.UserLinkListLevel0 {
+	list-style-type: none;
+	padding-left: 10px;
+	font-size: .9em;
+	margin-block-start: 0;
+}
+#linkbody ul.UserLinkListLevel0 > li {
+	font-weight: bold;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+#linkbody ul.UserLinkListLevel1 {
+	list-style-type: none;
+	padding-left: 10px;
+	font-weight: normal;
+	font-size: .9em;
+}
+#linkbody ul.UserLinkListLevel1 > li {
+	list-style-type: none;
+	padding-left: 10px;
+	padding-top: 5px;
+}
