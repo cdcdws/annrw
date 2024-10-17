@@ -1,0 +1,275 @@
+/* ---------------------------------------------------------------------- */
+/* Main Master CSS                                                        */
+/* ---------------------------------------------------------------------- */
+/* DO NOT DEFINE COLORS IN THIS STYLE SHEET. */
+/* COLORS ARE DEFINED IN THEMES */
+
+.leftColumn {
+	float: left;
+	width: 25%;
+	height: auto;
+	padding-top: 7px;
+	margin-left: 2px;
+}
+
+.rightColumn {
+	width: 72.5%;
+	height: auto;
+	margin-left: 26.5%;
+	padding-top: 7px;
+}
+
+#slideShow {
+	height: 232px;
+	width: 306px;
+	padding: 0;
+	margin: 5px 20px 10px 5px;
+}
+
+	#slideShow img {
+		padding: 15px;
+		border: 1px solid #ccc;
+		height: 200px;
+		width: 275px;
+		top: 0;
+		left: 0;
+	}
+
+.titlebar {
+	clear: both;
+	width: 100%;
+	padding: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-left-style: none;
+	border-right-style: none;
+	font-size: 0.9em;
+	font-weight: bold;
+}
+/* Main Master Footer */
+.footerDisplay {
+	width: 100%;
+	position: fixed;
+	bottom: 36px; /* Set to 1 pixel above Footer (Height in .footer below) */
+	z-index: 1000;
+}
+/* Main Master is now absolute 04/24/2010   SGY*/
+.footer {
+	width: 100%;
+	position: absolute; /*fixed;*/
+	height: 35px; /* THIS MUST MATCH value subtracted from window height in splitter.js!!! Fix the height so scrollbars on splitter will line up */
+	bottom: 0;
+	left: 0;
+	z-index: 100;
+	border-top-style: solid;
+	border-top-width: 1px;
+}
+
+.footertxt {
+	font-size: 1em;
+	font-weight: bold;
+	font-style: italic;
+}
+/* Scroll Master needs to be fixed for now 04/24/2010   SGY*/
+.scrollFooter {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 100;
+	border-top-style: solid;
+	border-top-width: 1px;
+}
+
+.mainPage {
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+}
+
+input {
+	border-style: solid;
+	border-width: 1px;
+}
+
+	input[type="button"] {
+		border: 1px solid;
+		cursor: pointer;
+		font-weight: bold;
+	}
+
+		input[type="button"].noaccesskey {
+			border: 1px solid;
+			cursor: pointer;
+			font-weight: bold;
+		}
+
+.appButtonBar input[type="button"].noaccesskey {
+	border: 1px solid;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+button {
+	border: 1px solid;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+	button.corners {
+		border-radius: 3px;
+	}
+
+/*================ NEW Button styling as of 2/10/2024 SGY =======================*/
+input[type="button"].noaccesskey {
+	background-color: var(--input_button_back_color);
+	color: var(--input_button_text_color);
+	border: none;
+	/*height: var(--default_button_height, 23px);*/
+	padding: 5px 8px;
+	font-size: var(--default_button_font_size, 1.0em);
+	border-radius: var(--default_button_radius, 3px);
+}
+
+	input[type="button"].noaccesskey:hover {
+		background-color: var(--input_button_hover_back_color);
+		color: var(--input_button_hover_text_color);
+		border-color: var(--input_button_hover_border_color);
+	}
+
+.appButtonBar input[type="button"].noaccesskey {
+	background-color: var(--appbuttonbar_input_button_back_color);
+	color: var(--appbuttonbar_input_button_text_color);
+	border: none;
+	/*height: var(--default_button_height, 23px);*/
+	padding: 5px 8px;
+	font-size: var(--default_button_font_size, 1.0em);
+	border-radius: var(--default_button_radius, 3px);
+}
+
+	.appButtonBar input[type="button"].noaccesskey:hover {
+		background-color: var(--appbuttonbar_input_button_hover_back_color);
+		color: var(--appbuttonbar_input_button_hover_text_color);
+		border-color: var(--appbuttonbar_input_button_hover_border_color);
+	}
+
+	.appButtonBar input[type="button"].noaccesskey:disabled {
+		/*          background-color: var(--button_disabled_back_color);*/
+		color: var(--button_disabled_text_color);
+		/*          border-color: var(--button_disabled_border_color);*/
+		cursor: not-allowed;
+		pointer-events: none;
+	}
+
+input {
+	border-color: var(--default_light_gray_border_color);
+	accent-color: var(--accent_color);
+}
+
+	input[type="button"] {
+		background-color: var(--input_button_back_color );
+		color: var(--input_button_text_color);
+		border: 1px solid var(--mediumNeutral_border_color);
+		/*height: var(--default_button_height, 23px);*/
+		padding: 5px 8px;
+		font-size: var(--default_button_font_size, 1.0em);
+		border-radius: var(--default_button_radius, 3px);
+	}
+
+		input[type="button"]:hover {
+			background-color: var(--input_button_hover_back_color);
+			color: var(--input_button_hover_text_color);
+			border-color: var(--input_button_hover_border_color);
+		}
+
+		input[type="button"]:disabled {
+			/*background-color: var(--button_disabled_back_color);*/
+			color: var(--button_disabled_text_color);
+			/*border-color: var(--default_light_gray_border_color);*/
+			cursor: not-allowed;
+			pointer-events: none;
+		}
+
+		input[type="button"].border {
+			background-color: var(--lightNeutral_back_color); /*transparent;*/
+			color: var(--button_text_color);
+			border: 1px solid var(--mediumNeutral_border_color);
+		}
+
+			input[type="button"].border:hover {
+				background-color: var(--input_button_hover_back_color);
+				color: var(--input_button_hover_text_color);
+				border-color: var(--input_button_hover_border_color);
+			}
+
+button {
+	background-color: var(--button_back_color);
+	color: var(--button_text_color);
+	border: 1px solid var(--mediumNeutral_border_color);
+	/*height: var(--default_button_height, 23px);*/
+	padding: 5px 8px;
+	font-size: var(--default_button_font_size, 1.0em);
+	border-radius: var(--default_button_radius, 3px);
+}
+
+	button:hover {
+		background-color: var(--button_hover_back_color);
+		color: var(--button_hover_text_color);
+		border-color: var(--button_hover_border_color);
+	}
+
+	button:focus-visible {
+		background-color: var(--button_hover_back_color);
+		color: var(--button_hover_text_color);
+		border-color: var(--button_hover_border_color);
+	}
+
+	button:disabled {
+		/*background-color: var(--button_disabled_back_color);*/
+		color: var(--button_disabled_text_color);
+		/*border-color: var(--button_disabled_border_color);*/
+		cursor: not-allowed;
+		pointer-events: none;
+	}
+
+	button.border {
+		background-color: var(--lightNeutral_back_color); /*transparent;*/
+		color: var(--button_text_color);
+		border: 1px solid var(--mediumNeutral_border_color);
+	}
+
+		button.border:hover {
+			background-color: var(--button_hover_back_color);
+			color: var(--button_hover_text_color);
+			border-color: var(--button_hover_border_color);
+		}
+
+		button.border:focus-visible {
+			background-color: var(--button_hover_back_color);
+			color: var(--button_hover_text_color);
+			border-color: var(--button_hover_border_color);
+		}
+
+	button.noborder {
+		background-color: transparent;
+		color: var(--button_text_color);
+		border: none;
+	}
+
+		button.noborder:hover {
+			background-color: var(--button_hover_back_color);
+			color: var(--button_hover_text_color);
+			border-color: var(--button_hover_border_color);
+		}
+
+		button.noborder:focus-visible {
+			background-color: var(--button_hover_back_color);
+			color: var(--button_hover_text_color);
+			border-color: var(--button_hover_border_color);
+		}
+
+/*Reset UI button height as it is bigger than Q and the Q button height value set above for input and button will make UI buttons too small
+	DO NOT REMOVE, and DO NOT MOVE UP in this file!  SGY 01/26/2023
+*/
+.ui-button {
+	height: 2.1em;
+}
