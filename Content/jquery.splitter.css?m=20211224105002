@@ -1,0 +1,55 @@
+/*.ui-state-default {
+  background-color: #b6b6b6;
+}
+
+.ui-state-hover {
+  background-color: #a8a8a8;
+}
+
+.ui-state-highlight {
+  background-color: #a8a8a8;
+}
+
+.ui-state-error {
+  background-color: #eaa;
+}
+*/
+
+.splitter-pane {
+  overflow: auto;
+}
+
+.splitter-bar-vertical {
+  background-image: url(/content/images/jquery.splitter/vgrabber.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 5px;
+  border-left: 1px solid;
+  border-right: 1px solid;
+}
+
+.splitter-bar-horizontal {
+  background-image: url(/content/images/jquery.splitter/hgrabber.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 5px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+}
+
+.splitter-bar-vertical-docked {
+  background-image: url(/content/images/jquery.splitter/vdockbar-trans.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 10px;
+  border-left: 1px solid;
+  border-right: 1px solid;
+}
+
+.splitter-bar.ui-state-highlight {
+  opacity: 0.7;
+}
+
+.splitter-iframe-hide {
+  visibility: hidden;
+}
