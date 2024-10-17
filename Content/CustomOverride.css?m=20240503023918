@@ -1,0 +1,39 @@
+body {
+}
+/*
+.listtbl > tbody > tr {
+	height: 24px;
+}
+.listtbl > tbody > tr > td {
+	padding-left: 4px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-align: left;
+	vertical-align: middle;
+	cursor: default;
+	height: 24px;
+}
+.stdtbl tbody tr {
+	height: 24px;
+}
+.stdtbl tbody td {
+	font-weight: normal;
+	vertical-align: middle;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	height: 24px;
+}
+input[type="button"] {
+	height: 24px;
+}
+.appButtonBar input[type="button"].noaccesskey  {
+	height: 24px;
+}
+input[type="button"].noaccesskey  {
+	height: 24px;
+}
+button {
+	height: 24px;
+}
+*/
