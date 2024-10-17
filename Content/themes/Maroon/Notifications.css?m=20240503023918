@@ -1,0 +1,13 @@
+/* ----------------------------------------------- */
+/* Notifications CSS                               */
+/* ------------------------------------------------*/
+/* THEMES STYLE SHEET */
+/* DEFINE COLORS ONLY IN THIS STYLE SHEET */
+
+.notifications
+{
+    border-color: var(--darkHighlight_border_color);
+}
+.notificationstext {
+    color: var(--default_text_color);
+}
