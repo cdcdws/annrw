@@ -1,0 +1,133 @@
+/* 
+ * Autologout - jQuery plugin 0.1 
+ * 
+ * Copyright (c) 2009 Tim Van Fosson 
+ * 
+ * Dependencies: jQuery 1.3.2, jQuery UI 1.7.1, bgiframe (by default) 
+ * 
+ * Edit History
+ *=========================================================================================
+ * 12/01/2010   SGY Modified to use blockUI instead of JQueryUI Dialog.
+ *                  Added a third URL for Automatic Logout URL.
+ *                  Added countdown timer.
+ *=========================================================================================
+ */
+; (function($) {
+    $.fn.extend({
+        autologout: function(refreshUrl, logoutUrl, timeoutUrl, options) {
+            options = $.extend({}, $.Autologout.defaults, options);
+
+            this.each(function() {
+                new $.Autologout(this, refreshUrl, logoutUrl, timeoutUrl, options);
+                return false;
+            });
+            return;
+        }
+    });
+
+    $.Autologout = function(prompt, refreshUrl, logoutUrl, timeoutUrl, options) {
+        var logoutTimer = null;
+        var sessionTimer = null;
+        var dialogWait = Math.max(0, Number(options.sessionDialogWait * 60000));
+        var timeout = Math.max(30000, (Number(options.sessionTimeout) * 60000) - dialogWait) - 30000;
+        var intId = 0;
+
+        //            $(prompt).dialog({
+        //                autoOpen: false,
+        //                bgiframe: options.bgiframe,
+        //                modal: true,
+        //                buttons: {
+        //                    OK: function() {
+        //                        $(this).dialog('close');
+        //                        $.get(refreshUrl, resetTimers, 'html');
+        //                    },
+        //                    Logout: sessionExpired
+
+        //                },
+        //                open: function() {
+        //                    if (options.pageSelector) {
+        //                        var height = $(options.pageSelector).outerHeight();
+        //                        $('.ui-widget-overlay').animate({ 'height': height }, 'fast');
+        //                    }
+        //                }
+        //            }).ajaxStart(function() { resetTimers(); });
+
+        $(document).ajaxStart(function() { resetTimers(); });
+
+        resetTimers();
+
+        function resetTimers() {
+            if (logoutTimer) clearTimeout(logoutTimer);
+            if (sessionTimer) clearTimeout(sessionTimer);
+
+            sessionTimer = setTimeout(sessionExpiring, timeout);
+        }
+
+        function sessionExpiring() {
+            logoutTimer = setTimeout(sessionExpired, dialogWait);
+            //$(prompt).dialog('open');
+
+            // Set focus to window to maximize it in case it is hidden or minimized! (Firefox, MUST enable 'Raise Lower Windows' option.
+
+//            var owin = open('', 'Login', '');
+//            owin.focus();
+
+            $.blockUI({ message: $(prompt),
+                css: { border: '2px solid #000',
+                    padding: 0,
+                    margin: 0,
+                    width: '50%',
+                    top: '20%',
+                    left: '25%',
+                    textAlign: 'center'
+                },
+                overlayCSS: { backgroundColor: '#666666' },
+                centerX: true,
+                centerY: true
+            });
+            notifyUser();
+        }
+
+        function sessionExpired() {
+            window.location.href = timeoutUrl;
+        }
+
+        function notifyUser() {
+            // seconds countdown
+            var countdown = dialogWait;
+            //current timestamp 
+            var now = Date.parse(new Date());
+            //ready should be stored in your cookie 
+            var ready = Date.parse(new Date(now + countdown)); // * 1000 to get ms 
+            intId = setInterval(function() {
+                var sec = (ready - Date.parse(new Date())) / 1000;
+                document.getElementById('lastCountDown').style.display = 'inline';
+                document.getElementById('lastCountDown').innerHTML = "You will be logged out in " + sec + " seconds.";
+                if (sec < 1) {
+                    window.location.href = timeoutUrl;
+                };
+            }, 1000);
+        };
+
+        $('#OK').click(function() {
+            clearInterval(intId);
+            $.unblockUI();
+            $.get(refreshUrl, resetTimers, 'html');
+        });
+
+        $('#Logout').click(function() {
+            clearInterval(intId);
+            $.unblockUI();
+            window.location.href = logoutUrl;
+        });
+
+    };
+
+    $.Autologout.defaults = {
+        sessionTimeout: 20,
+        sessionDialogWait: 1.0,
+        bgiframe: false,
+        pageSelector: null
+    };
+
+})(jQuery);
