@@ -1,0 +1,37 @@
+/*-----------------*/
+/* Main Master CSS */
+/*-----------------*/
+/* THEMES STYLE SHEET */
+/* DEFINE COLORS ONLY IN THIS STYLE SHEET */
+
+.leftColumn {
+	background: var(--default_back_color);
+}
+
+.rightColumn {
+	background: var(--default_back_color);
+}
+
+.titlebar {
+	background-color: var(--lightNeutral_back_color);
+	border-color: var(--default_light_gray_border_color) var(--lightHighlight_border_color) var(--lightHighlight_border_color) var(--default_light_gray_border_color);
+}
+
+.footer {
+	background-color: var(--lightNeutral_back_color);
+	border-top-color: var(--lightNeutral_border_color);
+}
+
+.footertxt {
+	color: var(--default_medium_gray_text_color);
+}
+
+.scrollFooter {
+	background-color: var(--lightNeutral_back_color);
+	border-top-color: var(--darkNeutral_border_color);
+}
+
+.mainPage {
+	background-color: var(--default_back_color);
+	border-bottom-color: var(--darkNeutral_border_color);
+}
