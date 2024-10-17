@@ -1,0 +1,25 @@
+/* ----------------------------------------------- */
+/* Notifications CSS                               */
+/* ------------------------------------------------*/
+/* DO NOT DEFINE COLORS IN THIS STYLE SHEET*/
+/* COLORS ARE DEFINED IN THEMES */
+
+.notifications 
+{
+    padding-bottom:5px; 
+    border:solid 1px; 
+}
+.notificationstext {
+    font-size: .8em;
+}
+.notificationstbl
+{
+    font-family: Verdana, Helvetica, Sans-Serif;
+    vertical-align: top;
+    margin: 0px;
+    border-collapse: collapse;
+    padding-right: 0px;
+    padding-left: 0px;
+    border-spacing: 0px;
+    empty-cells: show;
+}
