@@ -1,0 +1,37 @@
+.ui-state-default {
+  background-color: #F0F0F0;
+}
+
+.ui-state-hover {
+  background-color: #527798;
+}
+
+.ui-state-highlight {
+  background-color: #527798;
+}
+
+.ui-state-error {
+  background-color: #eaa;
+}
+
+.splitter-bar-vertical {
+    background-color: #F0F0F0;
+    border-left-color: #808080;
+    border-right-color: #808080;
+}
+
+.splitter-bar-horizontal {
+    background-color: #F0F0F0;
+    border-top-color: #808080;
+    border-bottom-color: #808080;
+}
+
+.splitter-bar-vertical.active, .splitter-bar-vertical:hover, .splitter-bar-horizontal.active, .splitter-bar-horizontal:hover {
+    background-color: #527798;
+}
+
+.splitter-bar-vertical-docked {
+    background-color: #F0F0F0;
+    border-left-color: #808080;
+    border-right-color: #808080;
+}
