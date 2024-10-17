@@ -1,0 +1,247 @@
+/*-----------------*/
+/* Theme Root CSS */
+/*-----------------*/
+/* THEMES STYLE SHEET */
+/* DEFINE CSS VARIABLES ONLY IN THIS STYLE SHEET */
+
+:root {
+	/* Maroon Theme Colors */
+	--darkHighlight_color: #893B3B;
+	--mediumHighlight_color: #B97777;
+	--lightHighlight_color: #E9C5C5;
+	--darkNeutral_color: #928C8C;
+	--mediumNeutral_color: #D1CDCD;
+	--lightNeutral_color: #F1F0F0;
+	--panelNeutral_color: #F9F9F9;
+	/*Accent Color for Input elements Checkbox, Radio Button*/
+	--accent_color: #E9C5C5;
+	/* Set up Text Color to use on the Background for each color*/
+	--darkHighlight_text_color: #FFFFFF;
+	--mediumHighlight_text_color: #FFFFFF;
+	--lightHighlight_text_color: #000000;
+	--darkNeutral_text_color: #FFFFFF;
+	--mediumNeutral_text_color: #000000;
+	--lightNeutral_text_color: #000000;
+	--panelNeutral_text_color: #000000;
+	/* Background, Border color variables based on Theme colors */
+	--darkHighlight_back_color: var(--darkHighlight_color);
+	--mediumHighlight_back_color: var(--mediumHighlight_color);
+	--lightHighlight_back_color: var(--lightHighlight_color);
+	--darkNeutral_back_color: var(--darkNeutral_color);
+	--mediumNeutral_back_color: var(--mediumNeutral_color);
+	--lightNeutral_back_color: var(--lightNeutral_color);
+	--panelNeutral_back_color: var(--panelNeutral_color);
+	--darkHighlight_border_color: var(--darkHighlight_color);
+	--mediumHighlight_border_color: var(--mediumHighlight_color);
+	--lightHighlight_border_color: var(--lightHighlight_color);
+	--darkNeutral_border_color: var(--darkNeutral_color);
+	--mediumNeutral_border_color: var(--mediumNeutral_color);
+	--lightNeutral_border_color: var(--lightNeutral_color);
+	/*Common Default colors used across Q color themes and widgets*/
+	--default_red_color: red;
+	--default_back_color: #FFFFFF;
+	--default_text_color: #000000;
+	--default_light_text_color: #FFFFFF;
+	--default_link_color: blue;
+	--default_dark_gray_back_color: #454545;
+	--default_dark_gray_border_color: #454545;
+	--default_dark_gray_text_color: #454545;
+	--default_medium_gray_back_color: #999999;
+	--default_medium_gray_border_color: #999999;
+	--default_medium_gray_text_color: #999999;
+	--default_light_gray_back_color: #CCCCCC;
+	--default_light_gray_border_color: #CCCCCC;
+	--default_light_gray_text_color: #CCCCCC;
+	/* Common Q Date Picker Control (These are standard colors for the datepick common to all themes as defined below) (jquery.datepick.css) */
+	--datepick_button_back_color: #fcc;
+	--datepick_today_back_color: #f0c0c0;
+	--datepick_highlight_back_color: #FFFFB0;
+	--datepick_selected_back_color: #FFFF66;
+	--datepick_selected_text_color: #000000;
+	--datepick_light_text_color: #FFFFFF;
+	--datepick_text_color: #000000;
+	/* Common Disabled Text Color*/
+	--disabled_text_color: #999999;
+	/* Common Splitter colors common to all themes.  (jquery.enhsplitter.css) */
+	--splitter_bar_back_color: #ece9d8;
+	/* Common Default Values*/
+	--default_mainmenu_height: 40px; /*Dropdown menu row height*/
+	/* Common Buttons*/
+	--default_button_height: 25px; /*Button height*/
+	--default_button_font_size: 1.0; /*Button font size*/
+	--default_button_radius: 15px; /*Button height*/
+	/* App button Bar Buttons*/
+	--default_appbuttonbar_button_height: 27px; /*Button height*/
+	--default_appbuttonbar_button_font_size: 1.1em; /*Button font size*/
+	--default_appbuttonbar_button_radius: 15px; /*Button height*/
+	/* No Text Decoration*/
+	--no_text_decoration: none;
+	/*==============================================================================================================*/
+	/*COPY FROM Here down - Same for each theme*/
+	/*Main Page Styling  (MainMaster.css) */
+	--mainpage_back_color: var(--darkNeutral_back_color);
+	--mainpage_border_bottom_color: var(--darkNeutral_border_color);
+	--titlebar_back_color: var(--lightNeutral_back_color);
+	--titlebar_border_color: var(--lightNeutral_border_color);
+	--footer_back_color: var(--lightNeutral_back_color);
+	--footer_border_color: var(--lightNeutral_border_color);
+	/*Banner Styling  (Banner.css) */
+	--banner_back_color: var(--lightNeutral_back_color);
+	--banner_text_color: var(--lightNeutral_text_color);
+	--banner_border_color: var(--lightNeutral_border_color);
+	--banner_table_border-color: transparent;
+	--banner_table_th_back_color: var(--mediumNeutral_back_color);
+	--banner_table_th_text_color: var(--mediumNeutral_text_color);
+	--banner_table_th_border_color: transparent;
+	--banner_table_td_back_color: var(--default_back_color);
+	--banner_table_td_text_color: var(--default_text_color);
+	--banner_table_td_border_color: var(--mediumNeutral_border_color);
+	--banner_table_td2_border_color: transparent;
+	--banner_table_td2_text_color: var(--default_text_color);
+	--bannerpanel_back_color: var(--lightNeutral_back_color);
+	--bannerpanel_text_color: var(--lightNeutral_text_color);
+	--bannerpanel_border_color: var(--lightHighlight_border_color);
+	/*Banner Search Panel styling (Banner.css) */
+	--searchtable_back_color: var(--default_back_color);
+	--searchtable_text_color: var(--default_text_color);
+	--searchtable_link_color: var(--default_link_color);
+	--searchtable_border_color: var(--mediumNeutral_border_color);
+	--searchtable_thead_back_color: var(--mediumNeutral_back_color);
+	--searchtable_thead_text_color: var(--mediumNeutral_text_color);
+	--searchtable_thead_border_color: var(--mediumNeutral_border_color);
+	--searchtable_td_back_color: var(--default_back_color);
+	--searchtable_td_text_color: var(--default_text_color);
+	--searchtable_td_top_border_color: transparent;
+	--searchtable_td_bottom_border_color: var(--mediumNeutral_border_color);
+	--searchtable_td_left_border_color: transparent;
+	--searchtable_td_right_border_color: transparent;
+	--searchtable_td_hover_back_color: var(--lightHighlight_back_color);
+	/*Tabs and Buttonbar styling  (AppMenu.css) */
+	--appmenubar_back_color: var(--lightNeutral_back_color);
+	--appmenubar_border_color: var(--default_medium_gray_border_color);
+	--appmenubar_navapp_li_back_color: var(--lightNeutral_back_color);
+	--appmenubar_navapp_li_text_color: var(--lightNeutral_text_color);
+	--appmenubar_navapp_li_border_color: var(--default_medium_gray_border_color);
+	--appmenubar_navapp_li_hover_back_color: var(--mediumNeutral_back_color);
+	--appmenubar_navapp_li_hover_text_color: var(--mediumNeutral_text_color);
+	--appmenubar_navapp_li_hover_border_color: var(--default_medium_gray_border_color);
+	--appmenubar_navapp_li_selected_back_color: var(--mediumHighlight_back_color);
+	--appmenubar_navapp_li_selected_text_color: var(--mediumHighlight_text_color);
+	--appmenubar_navapp_li_selected_border_color: var(--mediumHighlight_border_color);
+	--appmenubar_navapp2_li_hover_back_color: var(--mediumNeutral_back_color);
+	--appmenubar_navapp2_li_hover_text_color: var(--mediumNeutral_text_color);
+	--appmenubar_navapp2_li_hover_border_color: var(--default_medium_gray_border_color);
+	--appmenubar_navapp2_li_selected_back_color: var(--mediumHighlight_back_color);
+	--appmenubar_navapp2_li_selected_text_color: var(--mediumHighlight_text_color);
+	--appmenubar_navapp2_li_selected_border_color: var(--mediumHighlight_border_color);
+	--appmenubar_dropmenu_back_color: var(--default_medium_gray_back_color);
+	--appmenubar_dropmenu_li_back_color: var(--lightNeutral_back_color);
+	--appmenubar_dropmenu_li_border_color: var(--lightNeutral_border_color);
+	/*Main Q Dropdown Menu definitions (DropdownMenu.css) */
+	--dropmenu_tr_height: var(--default_mainmenu_height); /*Dropdown main menu row height*/
+	--dropmenu_back_color: var(--mediumHighlight_back_color);
+	--dropmenu_text_color: var(--mediumHighlight_text_color);
+	--dropmenu_border_color: var(--mediumHighlight_border_color);
+	--dropmenu_hover_back_color: var(--mediumHighlight_back_color);
+	--dropmenu_hover_text_color: var(--mediumHighlight_text_color);
+	--dropmenu_hover_border_color: var(--mediumHighlight_back_color);
+	--dropmenu_li_back_color: var(--lightNeutral_back_color);
+	--dropmenu_li_border_color: var(--mediumHighlight_border_color);
+	--dropmenu_li_a_back_color: var(--lightNeutral_back_color);
+	--dropmenu_li_a_text_color: var(--lightNeutral_text_color);
+	--dropmenu_li_a_border_color: var(--lightNeutral_border_color);
+	--dropmenu_li_a_hover_back_color: var(--lightNeutral_back_color);
+	/* Set the Hover Color to the same color as the Menu Background*/
+	--dropmenu_li_a_hover_text_color: var(--mediumHighlight_color);
+	--dropmenu_li_a_hover_border_color: var(--lightNeutral_border_color);
+	--dropmenu_li_hr_border_color: var(--default_light_gray_border_color);
+	--datediv_hover_back_color: var(--mediumHighlight_back_color);
+	--datediv_hover_text_color: var(--mediumHighlight_text_color);
+	/*Panel Menu  (PanelMenu.css) */
+	--panel_back_color: var(--mediumHighlight_back_color);
+	--panel_text_color: var(--mediumHighlight_text_color);
+	--panelmenuheading_text_color: var(--default_text_color);
+	--panelmenuheading_a_text_color: var(--default_light_text_color);
+	--panelmenuheading_a_hover_text_color: var(--mediumNeutral_text_color);
+	/*Main Menu Left Category List    (PanelMenu.css) */
+	--maincolumnmenu_border_color: var(--mediumHighlight_back_color);
+	--maincolumnmenu_back_color: var(--mediumHighlight_back_color);
+	--maincolumnmenu_li_back_color: var(--mediumHighlight_back_color);
+	--maincolumnmenu_li_text_color: var(--mediumHighlight_text_color);
+	--maincolumnmenu_li_border_color: var(--mediumHighlight_border_color);
+	--maincolumnmenu_li_hover_back_color: var(--darkHighlight_back_color);
+	--maincolumnmenu_li_hover_text_color: var(--darkHighlight_text_color);
+	--maincolumnmenu_li_hover_border_color: var(--darkHighlite_border_color);
+	--maincolumnmenu_li_selected_back_color: var(--lightNeutral_back_color);
+	--maincolumnmenu_li_selected_text_color: var(--lightNeutral_text_color);
+	--maincolumnmenu_li_selected_border_color: var(--lightNeutral_border_color);
+	--menuitems_text_color: var(--lightNeutral_text_color);
+	--menuitems_back_color: var(--lightNeutral_back_color);
+	--menuitems_li_text_color: var(--default_dark_gray_text_color);
+	/* Set the Hover Color to the same color as the Menu Background*/
+	--menuitems_li_hover_text_color: var(--mediumHighlight_color);
+	--menuitems_heading_text_color: var(--darkHighlight_text_color);
+	--menuitems_li_hr_border_color: var(--default_light_gray_border_color);
+	/*Application button AREA styling (Area for Cancel, Reset, Submit...)  (MainMaster.css) */
+	--appbuttonbar_back_color: var(--default_back_color); /* Use this for floating Button Bar var(--lightNeutral_back_color);*/
+	--appbuttonbar_border_color: var(--default_back_color); /*var(--lightNeutral_border_color);*/
+	/*Application Button styling (Actual buttons for Cancel, Reset, Submit...)  (MainMaster.css) */
+	--button_back_color: transparent;
+	--button_text_color: var(--default_dark_gray_text_color);
+	--button_border_color: var(--mediumNeutral_color);
+	--button_hover_back_color: var(--darkNeutral_back_color);
+	--button_hover_text_color: var(--darkNeutral_text_color);
+	--button_hover_border_color: var(--darkNeutral_border_color);
+	--button_disabled_text_color: var(--disabled_text_color);
+	--button_disabled_back_color: var(--lightNeutral_color);
+	--button_disabled_border_color: var(--mediumNeutral_border_color);
+	--input_button_back_color: transparent;
+	--input_button_text_color: var(--default_dark_gray_text_color);
+	--input_button_border_top_color: transparent;
+	--input_button_border_bottom_color: transparent;
+	--input_button_border_left_color: transparent;
+	--input_button_border_right_color: transparent;
+	--input_button_text_decoration: var(--no_text_decoration);
+	--input_button_hover_back_color: var(--darkNeutral_back_color);
+	--input_button_hover_text_color: var(--darkNeutral_text_color);
+	--input_button_hover_border_color: var(--darkNeutral_border_color);
+	--input_button_hover_border_top_color: transparent;
+	--input_button_hover_border_bottom_color: transparent;
+	--input_button_hover_border_left_color: transparent;
+	--input_button_hover_border_right_color: transparent;
+	--input_button_hover_text_decoration: var(--no_text_decoration);
+	--appbuttonbar_input_button_back_color: transparent;
+	--appbuttonbar_input_button_text_color: var(--default_dark_gray_text_color);
+	--appbuttonbar_input_button_border_top_color: transparent;
+	--appbuttonbar_input_button_border_bottom_color: transparent;
+	--appbuttonbar_input_button_border_left_color: transparent;
+	--appbuttonbar_input_button_border_right_color: transparent;
+	--appbuttonbar_input_button_text_decoration: var(--no_text_decoration);
+	--appbuttonbar_input_button_hover_back_color: var(--darkNeutral_back_color);
+	--appbuttonbar_input_button_hover_text_color: var(--darkNeutral_text_color);
+	--appbuttonbar_input_button_hover_border_color: var(--darkNeutral_border_color);
+	--appbuttonbar_input_button_hover_border_top_color: transparent;
+	--appbuttonbar_input_button_hover_border_bottom_color: transparent;
+	--appbuttonbar_input_button_hover_border_left_color: transparent;
+	--appbuttonbar_input_button_hover_border_right_color: transparent;
+	--appbuttonbar_input_button_hover_text_decoration: var(--no_text_decoration);
+	/*Vertical Menu styling  (AppContent.css) */
+	--columnmenu_li_back_color: var(--mediumHighlight_back_color);
+	--columnmenu_li_text_color: var(--mediumHighlight_text_color);
+	--columnmenu_li_border_top_color: var(--mediumHighlight_border_color);
+	--columnmenu_li_border_bottom_color: var(--mediumHighlight_border_color);
+	--columnmenu_li_border_left_color: var(--mediumHighlight_border_color);
+	--columnmenu_li_border_right_color: var(--mediumHighlight_border_color);
+	--columnmenu_li_hover_back_color: var(--lightHighlight_back_color);
+	--columnmenu_li_hover_text_color: var(--lightHighlight_text_color);
+	--columnmenu_li_hover_border_top_color: var(--lightHighlight_border_color);
+	--columnmenu_li_hover_border_bottom_color: var(--lightHighlight_border_color);
+	--columnmenu_li_hover_border_left_color: var(--lightHighlight_border_color);
+	--columnmenu_li_hover_border_right_color: var(--lightHighlight_border_color);
+	--columnmenu_li_selected_back_color: var(--default_back_color);
+	--columnmenu_li_selected_text_color: var(--default_text_color);
+	--columnmenu_li_selected_border_top_color: var(--default_back_color);
+	--columnmenu_li_selected_border_bottom_color: var(--default_back_color);
+	--columnmenu_li_selected_border_left_color: var(--default_back_color);
+	--columnmenu_li_selected_border_right_color: var(--default_back_color);
+}
