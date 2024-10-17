@@ -1,0 +1,261 @@
+/*----------*/
+/* Site CSS */
+/*----------*/
+/* THEMES STYLE SHEET */
+/* DEFINE COLORS ONLY IN THIS STYLE SHEET */
+
+body {
+	color: var(--default_text_color);
+	background-color: var(--default_back_color);
+}
+
+body {
+	scrollbar-color: var(--scrollbar_thumb_color) var(--scrollbar_background_color);
+}
+
+	body::-webkit-scrollbar-track {
+		background-color: var(--scrollbar_background_color);
+	}
+
+	body::-webkit-scrollbar-thumb {
+		background-color: var(--scrollbar_thumb_color);
+	}
+
+.widgethdr {
+	background-color: var(--mediumHighlight_back_color);
+	color: var(--mediumHighlight_text_color);
+	border-color: var(--mediumNeutral_border_color);
+}
+
+.widgetbdy {
+	border-color: var(--mediumNeutral_border_color);
+}
+
+a:link, a:hover, a:active, a:visited {
+	color: var(--default_text_color);
+}
+
+.btn {
+	color: var(--default_text_color);
+}
+
+.copyright {
+	color: var(--default_dark_gray_text_color);
+}
+
+.error {
+	color: var(--default_red_color);
+}
+
+.aefieldset {
+	background-color: var(--lightHighlight_back_color);
+	border-color: var(--mediumNeutral_border_color);
+}
+
+.hdr {
+	background-color: var(--mediumHighlight_back_color);
+	color: var(--mediumHighlight_text_color);
+}
+
+.aelegend {
+	background-color: var(--mediumNeutral_back_color);
+	border-color: var(--mediumNeutral_border_color);
+}
+
+.listtbl {
+	border-color: var(--mediumNeutral_border_color);
+}
+
+	.listtbl > thead > tr {
+		background-color: var(--mediumNeutral_back_color);
+		color: var(--mediumNeutral_text_color);
+	}
+
+	.listtbl > tbody > tr.odd td {
+		background-color: var(--default_back_color);
+		color: var(--default_text_color);
+	}
+
+	.listtbl > tbody > tr.even td {
+		background-color: var(--lightNeutral_back_color);
+		color: var(--lightNeutral_text_color);
+	}
+
+	.listtbl > tbody > tr:hover td {
+		background-color: var(--lightHighlight_back_color);
+		color: var(--lightHighlight_text_color);
+	}
+
+	.listtbl.nohover > tbody > tr:hover td {
+		background-color: transparent;
+	}
+
+	.listtbl > tbody > tr.selected td {
+		background-color: var(--lightHighlight_back_color);
+		color: var(--lightHighlight_text_color);
+	}
+
+	.listtbl.rowseperator tbody td {
+		border-color: var(--mediumNeutral_border_color);
+	}
+
+	.listtbl.cellborder tbody td {
+		border-color: var(--mediumNeutral_border_color);
+	}
+
+.listtbl2 {
+	border-color: var(--mediumNeutral_border_color);
+}
+
+	.listtbl2 th {
+		background-color: var(--mediumNeutral_back_color);
+		color: var(--mediumNeutral_text_color);
+	}
+
+	.listtbl2 > tbody > tr.odd td {
+		background-color: var(--default_back_color);
+		color: var(--default_text_color);
+	}
+
+	.listtbl2 > tbody > tr.even td {
+		background-color: var(--lightNeutral_back_color);
+		color: var(--lightNeutral_text_color);
+	}
+
+	.listtbl2 > tbody > tr:hover td {
+		background-color: var(--mediumNeutral_back_color);
+		color: var(--mediumNeutral_text_color);
+	}
+
+	.listtbl2 > tbody > tr.selected td {
+		background-color: var(--lightHighlight_back_color);
+		color: var(--lightHighlight_text_color);
+	}
+
+.stdtbl {
+	border-color: var(--mediumNeutral_border_color);
+}
+
+	.stdtbl th {
+		border-color: var(--mediumNeutral_border_color);
+		background-color: var(--mediumNeutral_back_color);
+		color: var(--mediumNeutral_text_color);
+	}
+
+	.stdtbl td {
+		border-color: var(--mediumNeutral_border_color);
+	}
+
+	.stdtbl > tbody > tr:hover td {
+		background-color: var(--lightHighlight_back_color);
+		color: var(--lightHighlight_text_color);
+	}
+
+	.stdtbl tr.selected td {
+		background-color: var(--lightHighlight_back_color);
+		color: var(--lightHighlight_text_color);
+	}
+
+.schedtbl {
+	background-color: var(--default_back_color);
+	color: var(--default_text_color);
+	border-color: var(--mediumNeutral_border_color);
+}
+
+	.schedtbl th {
+		border-color: var(--mediumNeutral_border_color);
+		background-color: var(--mediumNeutral_back_color);
+		color: var(--mediumNeutral_text_color);
+	}
+
+	.schedtbl .colhdr {
+		border-color: var(--mediumNeutral_border_color);
+		background-color: var(--lightNeutral_back_color);
+		color: var(--lightNeutral_text_color);
+	}
+
+	.schedtbl td {
+		border-color: var(--mediumNeutral_border_color);
+	}
+
+.bigmsg {
+	color: var(--default_dark_gray_text_color);
+}
+
+.smallmsg {
+	color: var(--default_dark_gray_text_color);
+}
+
+.altRowBackground {
+	background-color: var(--lightNeutral_back_color);
+}
+
+.altRow {
+	/*	background-color: var(--lightNeutral_back_color);*/ /* In lieu of modifying every view to not assign this class. */
+	/*	color: var(--lightNeutral_text_color);*/
+}
+
+tr.over td {
+	background-color: var(--mediumNeutral_back_color);
+	color: var(--mediumNeutral_text_color);
+}
+
+tr.selected td {
+	background-color: var(--lightHighlight_back_color);
+	color: var(--lightHighlight_text_color);
+}
+
+.selected {
+	background-color: var(--lightHighlight_back_color);
+	color: var(--lightHighlight_text_color);
+}
+
+.txtin {
+	color: var(--default_text_color);
+	border-color: var(--default_light_gray_border_color);
+}
+
+.txtin2 {
+	color: var(--default_text_color);
+	border-color: var(--default_light_gray_border_color);
+}
+
+.txtin3 {
+	color: var(--default_text_color);
+	border-color: var(--default_light_gray_border_color);
+}
+
+.viewport {
+	border: solid 1px var(--lightNeutral_border_color);
+	background-color: var(--lightNeutral_back_color);
+	color: var(--lightNeutral_text_color);
+}
+
+.appblank {
+	color: var(--mediumHighlight_color);
+}
+
+.banner {
+	background-color: var(--lightNeutral_back_color);
+	color: var(--lightNeutral_text_color);
+}
+
+.divborderall {
+	border-color: var(--mediumNeutral_border_color);
+}
+
+.tblbordertop {
+	border-top-color: var(--mediumNeutral_border_color);
+}
+
+.tblborderbottom {
+	border-bottom-color: var(--mediumNeutral_border_color);
+}
+
+.tblborderleft {
+	border-left-color: var(--mediumNeutral_border_color);
+}
+
+.tblborderright {
+	border-right-color: var(--mediumNeutral_border_color);
+}
