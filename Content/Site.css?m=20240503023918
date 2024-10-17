@@ -1,0 +1,891 @@
+/*----------*/
+/* Site CSS */
+/*----------*/
+/* DO NOT DEFINE COLORS IN THIS STYLE SHEET. */
+/* COLORS ARE DEFINED IN THEMES */
+body {
+	font-size: .9em;
+	font-family: Verdana, Helvetica, Sans-Serif;
+	margin: 0;
+	padding: 0;
+}
+
+div#mainLeftColumn {
+	box-sizing: border-box;
+	padding: 10px;
+	width: 350px;
+	float: left;
+}
+
+div#mainRightColumn {
+	box-sizing: border-box;
+	padding: 10px;
+	float: left;
+}
+
+.widgethdr {
+	padding: 5px 10px;
+	font-size: 1.0em;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: bottom;
+	border-style: solid;
+	border-width: 1px 1px 0 1px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	white-space: nowrap;
+}
+
+.widgetbdy {
+	margin-left: 1px;
+	padding: 0px 2px 2px 2px;
+	border-style: solid;
+	border-width: 1px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+a, a:link, a:hover, a:active, a:visited {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+	a.reminder {
+		font-size: 0.8em;
+		font-weight: bold;
+		cursor: pointer;
+	}
+
+p {
+	padding-top: 0px;
+	margin-top: 0px;
+	padding-bottom: 0px;
+	margin-bottom: 5px;
+}
+/*---------------------------------------------------------------------------*/
+/* Input validation classes                                                  */
+/* 01/22/2014 JKM                                                            */
+/* Collected here from Site.css and AppContent.css and from the theme        */
+/* versions of these. Background-colors changed from #ffeeee to #ffdddd.     */
+/* Because of CSS precidence rules, make sure .input-required-field is       */
+/* declared before .input-validation-error.                                  */
+.appValidationError {
+	display: none;
+	width: 100%;
+	background-color: #ffdddd;
+	color: #ff0000;
+}
+
+.validationSummary {
+	padding: 0px;
+	overflow: hidden;
+	background-color: #ffdddd;
+	color: #ff0000;
+}
+
+	.validationSummary ul {
+		list-style: none;
+	}
+
+.input-required-field {
+	background-color: #ffffdd;
+}
+
+.input-validation-error {
+	border: 1px solid;
+	border-color: #ff0000;
+	background-color: #ffdddd;
+}
+
+.validation-summary-errors {
+	font-weight: bold;
+	color: #ff0000;
+}
+
+.field-validation-error {
+	color: #ff0000;
+}
+
+.validate-error {
+	background-color: #ffdddd;
+}
+/*---------------------------------------------------------------------------*/
+.page {
+	width: 100%;
+	/*margin-left: auto;  Auto Margins cause problems with Absolute positioning in IE8
+    margin-right: auto;*/
+}
+
+.pagebyline {
+	font-family: Verdana, Helvetica, Sans-Serif;
+	font-size: .8em;
+	font-weight: bold;
+}
+
+.btn {
+	font-size: 1em;
+}
+
+.clear {
+	clear: both;
+}
+
+.copyright {
+	font-size: .7em;
+}
+
+.error {
+	font-size: .7em;
+	font-weight: bold;
+}
+
+.aefieldset {
+	border: solid 1px;
+}
+
+.aehidden {
+	display: none;
+}
+
+.hdr {
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.leftTable {
+	float: left;
+	width: 49%;
+}
+
+.aelegend {
+	font-size: 1em;
+	font-weight: bold;
+	padding: 2px 2px 2px 2px;
+	border: solid 1px;
+}
+
+.listtbl {
+	font-size: .9em;
+}
+
+	.listtbl th {
+		font-weight: bold;
+		padding: 2px 2px 2px 2px;
+		text-align: left;
+		vertical-align: top;
+		white-space: nowrap;
+	}
+
+	.listtbl td {
+		padding: 2px 2px 2px 2px;
+		cursor: default;
+	}
+
+.displaytbl {
+	border-spacing: 0;
+	border-collapse: collapse;
+	border: none;
+}
+
+	.displaytbl.border {
+		border-style: solid;
+		border-width: 1px;
+		border-color: var(--mediumNeutral_border_color);
+	}
+
+	.displaytbl > caption {
+		padding: 3px 2px;
+		vertical-align: middle;
+		font-size: 1em;
+		font-weight: bold;
+	}
+
+	.displaytbl > thead > tr > th {
+		padding-top: 3px;
+		padding-bottom: 3px;
+		vertical-align: bottom;
+		font-weight: bold;
+		white-space: nowrap;
+		background-color: var(--lightHighlight_back_color);
+		color: var(--lightHighlight_text_color);
+	}
+
+	.displaytbl > thead > tr > td {
+		padding-top: 3px;
+		padding-bottom: 3px;
+		vertical-align: middle;
+		font-weight: bold;
+		white-space: nowrap;
+	}
+
+	.displaytbl > tbody > tr > td {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		vertical-align: top;
+		border-bottom-style: solid;
+		border-bottom-width: 1px;
+		border-bottom-color: var(--mediumNeutral_border_color);
+		background-color: var(--default_back_color);
+		color: var(--default_text_color);
+	}
+
+	.displaytbl > tbody > tr:hover td {
+		background-color: var(--lightNeutral_back_color);
+		color: var(--lightHighlight_text_color);
+	}
+
+	.displaytbl.nohover > tbody > tr:hover td {
+		background-color: var(--default_back_color);
+		color: var(--default_text_color);
+	}
+
+.displaytblopen {
+	background-color: #FCFCFC;
+	background-image: url(../Images/gradientReportOptions.jpg);
+	background-position: left;
+	background-repeat: repeat-y;
+}
+
+.rightDetails {
+	margin-left: 50%;
+	width: 50%;
+}
+
+.stdtbl {
+	font-size: .9em;
+}
+
+	.stdtbl th {
+		font-weight: bold;
+		white-space: nowrap;
+	}
+
+	.stdtbl td {
+		font-weight: normal;
+	}
+
+.brdrtbl {
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: .9em;
+	border: 1px solid Black;
+}
+
+	.brdrtbl th {
+		font-weight: bold;
+		border: 1px solid Black;
+	}
+
+	.brdrtbl td {
+		border: 1px solid Black;
+	}
+
+.scheddiv {
+	width: 100%;
+	padding-bottom: 5px;
+}
+
+.schedimg {
+	cursor: pointer;
+}
+
+.schedtblhdr {
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: .9em;
+	font-weight: normal;
+}
+
+.schedtbl {
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: .9em;
+	font-weight: normal;
+}
+
+	.schedtbl th {
+		font-weight: bold;
+		padding-left: 2px;
+		padding-right: 2px;
+	}
+
+.bigmsg {
+	font-size: .9em;
+	font-weight: bold;
+}
+
+.smallmsg {
+	font-size: .7em;
+	font-weight: bold;
+}
+
+.xsmallmsg {
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: .6em;
+	font-weight: bold;
+}
+
+.smalltxt {
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: .7em;
+	font-weight: normal;
+}
+
+.tblinset {
+	border: none;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+	.tblinset td {
+		border: none;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+tr.over td {
+	cursor: pointer;
+}
+
+.txtin {
+	font-family: Verdana, Helvetica, Sans-Serif;
+	font-size: 1em;
+	border: solid 1px;
+}
+
+.txtin2 {
+	font-family: Verdana, Helvetica, Sans-Serif;
+	font-size: 1em;
+}
+
+.txtin3 {
+	font-family: Verdana, Helvetica, Sans-Serif;
+	font-size: .9em;
+}
+
+.smalltxt {
+	font-family: Verdana, Helvetica, Sans-Serif;
+	font-size: .8em;
+}
+
+.viewport {
+	width: 80%;
+	height: 200px;
+	overflow: auto;
+	position: relative;
+}
+
+.appblank {
+	font-size: 2.5em;
+	font-weight: bold;
+	filter: shadow(OffX=3, OffY=3, Color='#cccccc', Positive='true');
+	text-shadow: -3px 3px #cccccc;
+}
+
+.banner {
+	font-size: 1.1em;
+	font-weight: bold;
+	text-align: center;
+}
+
+.errtbl {
+	border: solid 1px;
+	font-size: .9em;
+}
+
+	.errtbl th {
+		font-weight: bold;
+		padding: 0px 2px 0px 2px;
+		vertical-align: top;
+		white-space: nowrap;
+	}
+
+	.errtbl td {
+		padding: 0px 2px 0px 2px;
+		vertical-align: top;
+	}
+
+.reportparmstbl {
+	border: solid 1px;
+}
+
+	.reportparmstbl th {
+		font-weight: bold;
+		white-space: nowrap;
+	}
+
+.hidex::-ms-clear {
+	display: none;
+}
+/*Added for version 4.1.0*/
+.datepick-trigger {
+	margin-top: 1px;
+	margin-left: 2px;
+	vertical-align: top;
+	cursor: pointer;
+}
+
+h1 {
+	font-size: 19.44px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+
+h2 {
+	font-size: 14.4px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+
+:focus {
+	outline: 1px #333333 solid;
+}
+
+/* To get disabled controls of various types to look the same across different browsers. */
+input:not([type="button"]):disabled {
+	background-color: rgb(240,240,240);
+	color: rgb(1,1,1);
+}
+
+select:disabled {
+	background-color: rgb(240,240,240);
+	color: rgb(1,1,1);
+}
+
+	select:disabled::-ms-value { /* Specific to I.E. to undo the greyed out text */
+		color: rgb(1,1,1);
+	}
+
+textarea:disabled {
+	background-color: rgb(240,240,240);
+	color: rgb(1,1,1);
+}
+
+#logo {
+	background-image: url(../../../images/logopage.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 250px;
+	width: 250px;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+div#login input.txtin {
+	border-color: var(--lightHighlight_border_color);
+	margin: 5px 0;
+	padding: 10px;
+	border-radius: 5px;
+	width: calc(100% - 40px);
+}
+
+div#login input[type="button"] {
+	border-style: solid;
+	border-width: 1px;
+	border-color: var(--lightHighlight_border_color);
+	background-color: var(--lightHighlight_back_color); /* #3772FF; */
+	color: black;
+	font-weight: bold;
+	margin: 5px 0;
+	padding: 10px;
+	border-radius: 5px;
+	width: calc(100% - 20px);
+}
+
+	div#login input[type="button"]:hover, div#login input[type="button"]:focus {
+		background-color: var(--mediumHighlight_back_color);
+	}
+
+#SP_Detail {
+	overflow: auto;
+	position: relative;
+	margin-left: 20px;
+}
+
+#tblDetailContainer {
+	border-spacing: 0;
+	border: none;
+	width: 100%;
+}
+
+a.clsHeaderLink {
+	padding: 5px 8px;
+	font-size: 0.9em;
+	font-weight: bold;
+	cursor: pointer;
+	text-decoration: none;
+	border-radius: 15px;
+}
+
+	a.clsHeaderLink:hover {
+		background-color: var(--darkNeutral_back_color);
+		color: var(--darkNeutral_text_color);
+	}
+
+/*==================================================================================================*/
+/* An Area Table definition for apps with accordian-style data areas.                               */       
+/* See Student Profile, Student Editor, Staff Editor, Student Health, and Parent & Student Portal.  */
+/* Note: same definition in Q, ParentPortal, StudentPortal.                                         */
+table.clsAreaTable {
+	width: calc(100% - 40px);
+	border-spacing: 0;
+	border-radius: 10px;
+	border-style: solid;
+	border-width: 1px;
+	overflow: hidden;
+	margin-left: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border-color: var(--darkNeutral_color);
+}
+
+	table.clsAreaTable > thead > tr {
+		cursor: pointer;
+		font-size: 0.9em;
+		font-weight: bold;
+	}
+
+		table.clsAreaTable > thead > tr > th {
+			padding: 5px;
+			background-color: var(--darkNeutral_back_color);
+			color: var(--darkNeutral_text_color);
+		}
+
+			table.clsAreaTable > thead > tr > th > img.paneltoggle {
+				height: 16px;
+				width: 16px;
+				vertical-align: middle;
+				margin-left: 3px;
+				margin-right: 3px;
+				border-radius: 5px;
+			}
+
+			table.clsAreaTable > thead > tr > th > label {
+				cursor: inherit;
+			}
+
+		table.clsAreaTable > thead > tr > td { /* Student Profile and the Portals use td's in thead */
+			padding: 5px;
+			background-color: var(--darkNeutral_back_color);
+			color: var(--darkNeutral_text_color);
+		}
+
+			table.clsAreaTable > thead > tr > td.clsAreaShowAll {
+				width: 15%;
+				text-align: right;
+				padding-right: 10px;
+				white-space: nowrap;
+			}
+
+				table.clsAreaTable > thead > tr > td.clsAreaShowAll > .ShowAll {
+					vertical-align: middle;
+				}
+
+			table.clsAreaTable > thead > tr > td > img.paneltoggle {
+				height: 16px;
+				width: 16px;
+				vertical-align: middle;
+				margin-left: 3px;
+				margin-right: 3px;
+				border-radius: 5px;
+			}
+
+			table.clsAreaTable > thead > tr > td > label {
+				cursor: inherit;
+			}
+
+	table.clsAreaTable > tbody > tr > td {
+		padding: 5px;
+	}
+
+	/* Neither a displaytbl nor a listtbl inside a clsAreaTable should have a border because it causes a double border look. */
+	table.clsAreaTable .displaytbl {
+		border-color: transparent;
+	}
+
+	table.clsAreaTable .listtbl {
+		border-color: transparent;
+	}
+/*==================================================================================================*/
+
+/*==================================================================================================*/
+/* A Scroll-to-Top tab to sit in the upper right of a scrollable area next to the scroll bar.	    */
+/* See StudentProfile\Main, StudentEditor\BrowsePanels, Parent and StudentPortal\PortalMainPage.    */
+/* Note: same definition in Q, ParentPortal, StudentPortal.                                         */
+div.ScrollToTopTab {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: fit-content;
+	height: fit-content;
+	padding: 0 4px 2px 4px;
+	background-color: var(--darkHighlight_back_color);
+	color: var(--darkHighlight_text_color);
+	border-bottom-left-radius: 5px;
+	font-weight: bold;
+	font-size: 1.4em;
+	text-align: center;
+	cursor: pointer;
+	display: none;
+}
+/*==================================================================================================*/
+
+/*==================================================================================================*/
+/* A slide-out menu that floats left of the main content.                                           */
+/* See StudentProfile\Main, StudentEditor\BrowsePanels, Parent and StudentPortal\PortalMainPage.    */
+/* Note: same definition in Q, ParentPortal, StudentPortal.                                         */
+div.LeftMenuTab {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 6px 4px 6px 6px;
+	cursor: pointer;
+	font-size: 1.0em;
+	font-weight: bold;
+	text-align: right;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	background-color: var(--darkHighlight_back_color);
+	color: var(--darkHighlight_text_color);
+	writing-mode: vertical-rl;
+	z-index: 5;
+}
+
+div.LeftMenuContainer {
+	position: relative;
+	float: left;
+	width: 200px;
+	overflow: hidden;
+	background-color: var(--default_back_color);
+	color: var(--default_text_color);
+	z-index: 10;
+	border: solid 1px var(--darkHighlight_color);
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+	div.LeftMenuContainer table.MenuHeader {
+		width: 100%;
+		border-spacing: 0;
+		border: none;
+		font-weight: bold;
+		cursor: pointer;
+	}
+
+		div.LeftMenuContainer table.MenuHeader td.MenuHeaderText {
+			text-align: center;
+			width: 98%;
+			background-color: var(--darkHighlight_back_color);
+			color: var(--darkHighlight_text_color);
+		}
+
+		div.LeftMenuContainer table.MenuHeader td.MenuHeaderClose {
+			padding: 2px 4px;
+			font-size: 1.2em;
+			text-align: right;
+			background-color: var(--darkHighlight_back_color);
+			color: var(--darkHighlight_text_color);
+			border-top-right-radius: 5px;
+		}
+
+	div.LeftMenuContainer div.MenuBodyDiv {
+		overflow: auto;
+	}
+
+	div.LeftMenuContainer table.MenuBodyTable {
+		width: 100%;
+		border-spacing: 0;
+		border: none;
+	}
+
+		div.LeftMenuContainer table.MenuBodyTable > tbody > tr > td {
+			padding: 5px 2px;
+			font-size: 0.9em;
+			font-weight: bold;
+		}
+
+			div.LeftMenuContainer table.MenuBodyTable > tbody > tr > td:first-child {
+				text-align: center;
+			}
+
+			div.LeftMenuContainer table.MenuBodyTable > tbody > tr > td > img {
+				height: 16px;
+				width: 16px;
+				margin-left: 2px;
+				vertical-align: middle;
+				border-radius: 5px;
+			}
+
+		div.LeftMenuContainer table.MenuBodyTable > tbody > tr:hover > td {
+			background-color: var(--lightHighlight_back_color);
+		}
+
+		div.LeftMenuContainer table.MenuBodyTable .areamenu-selected {
+			background-color: var(--darkNeutral_back_color);
+			color: var(--darkNeutral_text_color);
+		}
+
+		div.LeftMenuContainer table.MenuBodyTable .areamenu-unselected {
+			background-color: var(--default_back_color); /*var(--lightNeutral_back_color);*/
+			color: var(--lightNeutral_text_color);
+		}
+/*==================================================================================================*/
+
+/*==================================================================================================*/
+/* Dashboard Widgets.                                                                               */
+/* See Student Profile, Parent Portal, and Student Portal                                           */
+/* Note: same definition in Q, ParentPortal, StudentPortal.                                         */
+div.DashboardContent {
+	width: 100%;
+	overflow: auto;
+}
+
+	div.DashboardContent > table {
+		border-spacing: 0;
+		border-collapse: collapse;
+		border: none;
+		width: 100%;
+	}
+
+		div.DashboardContent > table > tbody > tr > td {
+			padding: 0 10px;
+			width: 33%;
+			text-align: center;
+			vertical-align: top;
+		}
+
+	div.DashboardContent div.DashboardWidget {
+		margin: 10px 0;
+		padding: 0;
+		border-width: 1px;
+		border-style: solid;
+		border-color: var(--mediumNeutral_border_color);
+		border-radius: 5px;
+		background-color: white;
+		cursor: default;
+		overflow: hidden;
+	}
+
+		div.DashboardContent div.DashboardWidget div.DashboardWidgetHeader {
+			padding: 3px 5px;
+			text-align: center;
+			font-weight: bold;
+			background-color: var(--mediumHighlight_back_color);
+			color: var(--mediumHighlight_text_color);
+		}
+
+		div.DashboardContent div.DashboardWidget div.DashboardWidgetContent {
+			position: relative;
+			padding: 5px 10px;
+			overflow-y: auto;
+		}
+/*==================================================================================================*/
+
+
+/* For InfoMain */
+#divInfoMainTileContainer {
+	text-align: center;
+	vertical-align: top;
+	padding: 20px;
+	background-color: white;
+	overflow-y: auto;
+}
+
+	#divInfoMainTileContainer #contactTileHeader {
+		padding: 10px;
+		font-size: 1.5em;
+		font-weight: bold;
+	}
+
+	#divInfoMainTileContainer #studentTileHeader {
+		padding: 10px;
+		font-size: 1.5em;
+		font-weight: bold;
+	}
+
+	#divInfoMainTileContainer .contactTileContainer {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	#divInfoMainTileContainer .studentTileContainer {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	#divInfoMainTileContainer .contactTile {
+		border-color: var(--mediumNeutral_border_color);
+		background-color: var(--lightNeutral_back_color);
+		color: var(--lightNeutral_text_color);
+		margin: 10px;
+		padding: 10px;
+		text-align: center;
+		min-width: 200px;
+		border-style: solid;
+		border-width: 2px;
+		border-radius: 5px;
+	}
+
+		#divInfoMainTileContainer .contactTile.ReenrollComplete {
+			background-color: #f0fff0;
+		}
+
+		#divInfoMainTileContainer .contactTile.ReenrollIncomplete {
+			background-color: #fff0f0;
+		}
+
+		#divInfoMainTileContainer .contactTile:hover {
+			border-color: var(--mediumHighlight_border_color);
+			cursor: pointer;
+		}
+
+	#divInfoMainTileContainer .studentTile {
+		border-color: var(--mediumNeutral_border_color);
+		background-color: var(--lightNeutral_back_color);
+		color: var(--lightNeutral_text_color);
+		margin: 10px;
+		padding: 10px;
+		text-align: center;
+		min-width: 200px;
+		border-style: solid;
+		border-width: 2px;
+		border-radius: 5px;
+	}
+
+		#divInfoMainTileContainer .studentTile.ReenrollComplete {
+			background-color: #f0fff0;
+		}
+
+		#divInfoMainTileContainer .studentTile.ReenrollIncomplete {
+			background-color: #fff0f0;
+		}
+
+		#divInfoMainTileContainer .studentTile:hover {
+			border-color: var(--mediumHighlight_border_color);
+			cursor: pointer;
+		}
+
+		#divInfoMainTileContainer .studentTile .tileStudentPicture {
+			height: 120px;
+			border-radius: 5px;
+		}
+
+		#divInfoMainTileContainer .studentTile .tileStudentNickname {
+			font-size: 1.2em;
+			font-weight: bold;
+		}
+
+		#divInfoMainTileContainer .studentTile .tileStudentName {
+		}
+
+		#divInfoMainTileContainer .studentTile .tileCurrentGrade {
+		}
+
+		#divInfoMainTileContainer .studentTile .tileCurrentSchool {
+		}
