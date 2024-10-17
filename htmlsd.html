@@ -1,0 +1,421 @@
+
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=8;" /><meta http-equiv="Page-Exit" content="blendTrans(Duration=0.01)" /><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" /><meta http-equiv="Pragma" content="no-cache" /><meta http-equiv="Expires" content="0" /><title>
+
+  Parent Portal
+
+</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/ParentPortal/favicon/apple-touch-icon.png?v=XBze87Kjmz" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/ParentPortal/favicon/favicon-32x32.png?v=XBze87Kjmz" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/ParentPortal/favicon/favicon-16x16.png?v=XBze87Kjmz" />
+    <link rel="manifest" href="/ParentPortal/favicon/site.webmanifest?v=XBze87Kjmz" />
+    <link rel="mask-icon" href="/ParentPortal/favicon/safari-pinned-tab.svg?v=XBze87Kjmz" color="#5bbad5" />
+    <link rel="shortcut icon" href="/ParentPortal/favicon/favicon.ico?v=XBze87Kjmz" />
+    <meta name="apple-mobile-web-app-title" content="Q SIS" /><meta name="application-name" content="Q SIS" /><meta name="msapplication-TileColor" content="#2b5797" /><meta name="theme-color" content="#ffffff" />	
+
+    <link href="/ParentPortal/Content/themes/base/jquery-ui.structure-1.13.0.min.css?m=20220616073134" rel="stylesheet" type="text/css" />
+    <link href="/ParentPortal/Content/themes/base/jquery-ui.theme-1.13.0.min.css?m=20220616073134" rel="stylesheet" type="text/css" />
+    <link href="/ParentPortal/Content/aeExceptions.jquery-ui.theme-1.13.0.css?m=20240509044600" rel="stylesheet" type="text/css" />
+    <link href="/ParentPortal/Content/jquery.datepick.css?m=20211224105002" rel="stylesheet" type="text/css" />
+    <link href="/ParentPortal/Content/jquery.timeentry.css?m=20211224105002" rel="stylesheet" type="text/css" />
+    <link href="/ParentPortal/Content/jquery.treeTable.css?m=20211224105002" rel="stylesheet" type="text/css" />
+    <link href="/ParentPortal/Content/jquery.datetimepicker.css?m=20211224105002" rel="stylesheet" type="text/css" />
+    <link href="/ParentPortal/Content/jquery.splitter.css?m=20211224105002" rel="stylesheet" type="text/css" />
+    <link href="/ParentPortal/Content/MainMaster.css?m=20240530054700" rel="stylesheet" type="text/css" />
+    <link href="/ParentPortal/Content/Notifications.css?m=20240503023918" rel="stylesheet" type="text/css" />
+    <link href="/ParentPortal/Content/AppContent.css?m=20240503023918" rel="stylesheet" type="text/css" />
+    <link href="/ParentPortal/Content/News.css?m=20211224105002" rel="stylesheet" type="text/css" />
+    <link href="/ParentPortal/Content/Site.css?m=20240503023918" rel="stylesheet" type="text/css" />
+    <link href="/ParentPortal/Content/CustomOverride.css?m=20240503023918" rel="stylesheet" type="text/css" />
+
+    <link href="/ParentPortal/Content/Themes/Maroon/ThemeRoot.css?m=20240328080516" rel="stylesheet" type="text/css" />
+    <link href="/ParentPortal/Content/Themes/Maroon/MainMaster.css?m=20240503023918" rel="stylesheet" type="text/css" />
+    <link href="/ParentPortal/Content/Themes/Maroon/Site.css?m=20240503023918" rel="stylesheet" type="text/css" />
+    <link href="/ParentPortal/Content/Themes/Maroon/jquery.datepick.css?m=20240503023918" rel="stylesheet" type="text/css" />
+    <link href="/ParentPortal/Content/Themes/Maroon/Notifications.css?m=20240503023918" rel="stylesheet" type="text/css" />
+    <link href="/ParentPortal/Content/Themes/Maroon/AppContent.css?m=20240503023918" rel="stylesheet" type="text/css" />
+    <link href="/ParentPortal/Content/Themes/Maroon/jquery.splitter.css?m=20211224105002" rel="stylesheet" type="text/css" />
+
+    <script src="/ParentPortal/Scripts/jquery-1.12.4.min-patched.js?m=20211224105004" type="text/javascript"></script>
+    <script src="/ParentPortal/Scripts/jquery-ui-1.13.0.min.js?m=20220616073134" type="text/javascript"></script>
+    <script src="/ParentPortal/Scripts/jquery.ui.touch-punch.min.js?m=20211224105004" type="text/javascript"></script>
+    <script src="/ParentPortal/Scripts/jquery.mousewheel.min.js?m=20211224105004" type="text/javascript"></script>
+    <script src="/ParentPortal/Scripts/jquery.datepick.min.js?m=20211224105004" type="text/javascript"></script>
+    <script src="/ParentPortal/Scripts/jquery.timeentry.min.js?m=20211224105004" type="text/javascript"></script>
+    <script src="/ParentPortal/Scripts/jquery.datetimepicker.js?m=20211224105004" type="text/javascript"></script>
+    <script src="/ParentPortal/Scripts/jquery.blockUI.js?m=20211224105004" type="text/javascript"></script>
+    <script src="/ParentPortal/Scripts/jquery.tablesorter.js?m=20211224105004" type="text/javascript"></script>
+    <script src="/ParentPortal/Scripts/jquery.maskedinput.min.js?m=20211224104838" type="text/javascript"></script>
+    <script src="/ParentPortal/Scripts/jquery.splitter.js?m=20211224105004" type="text/javascript"></script>
+    <script src="/ParentPortal/Scripts/spell.js?m=20211224105004" type="text/javascript"></script>
+    <script src="/ParentPortal/Scripts/jquery.timeout1.js?m=20211224105004" type="text/javascript"></script>
+    <script src="/ParentPortal/Scripts/jquery.treetable.js?m=20211224105004" type="text/javascript"></script>
+    <script src="/ParentPortal/Scripts/jquery.cookie.js?m=20211224105004" type="text/javascript"></script>
+    <script src="/ParentPortal/Scripts/jquery.corner.js?m=20211224105004" type="text/javascript"></script>
+    <script src="/ParentPortal/Scripts/jquery.cycle.lite.js?m=20211224105004" type="text/javascript"></script>
+    <script src="/ParentPortal/Scripts/jquery.form.min.js?m=20211224105004" type="text/javascript"></script>
+    <script src="/ParentPortal/Scripts/Main.Master-1.0.0.js?m=20240503023918" type="text/javascript"></script>
+
+
+
+
+    <style type="text/css">
+      html {overflow: auto;}
+    </style>
+  </head>
+  <body>
+    <div id="page" class="page">
+      <div id="header" style="width:100%; position:fixed; height:62px; top:0; left:0; z-index:100; border-bottom:1px solid #999999;" class="lightNeutral">
+
+<style type="text/css">
+  iframe.skiptranslate {display: none !important;} 
+  body {top: 0px !important;}
+</style>
+
+<div role="banner">
+  <table width="100%">
+    <tr>
+      <td valign="top">
+        <h1><img src="/ParentPortal/Images/MainLogo.png" alt="Q ParentConnection" style="height:58px;" /></h1>
+      </td>
+      <td style="padding:1px 10px; text-align:right; vertical-align:middle; white-space:nowrap;" id="headerlinks">
+        <a onclick="showInfo('Home');" id="A1" name="A1"  class="clsHeaderLink" tabindex="0"><label for="HomeLink" id="lblHomeLink">Home</label></a>
+
+        <a onclick="showInfo('FAQ');" id="A2" name="A2"  class="clsHeaderLink" tabindex="0"><label for="FAQLink" id="lblFAQLink">FAQ's</label></a>
+
+      </td>
+      <td style="padding:0 5px; width:1px; white-space:nowrap;">
+
+        <div id="google_translate_element"></div>
+        <script type="text/javascript">
+          function googleTranslateElementInit() { new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.VERTICAL, autoDisplay: false, includedLanguages: '' }, 'google_translate_element'); }
+        </script>
+        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+      </td>
+    </tr>
+  </table>
+</div>
+<script type="text/javascript">
+  function showInfo(slocation) {
+    showView(slocation);
+  };
+  function ChangeLanguage(ctrl) {
+    $.post('/ParentPortal/Home/SetCurrentLanguage/',
+      { newLanguage: $(ctrl).val() },
+      function (result) { location.reload(true); },
+      "json");
+  }
+</script>
+
+      </div>
+      <div id="main" style="width:100%; top:62px; bottom:0px; position:absolute;">                    
+
+
+  <div id="mainLeftColumn">
+    <div id="login" role="main">
+      <form id="loginform" name="loginform" method="post" action="/ParentPortal/Home/Login">
+        <input aria-label="districtid hidden" data-role="none" id="districtid" name="districtid" style="display:none;" type="text" value="82060" />
+        <div class="widgethdr">
+          <span class="headerText">ParentConnection Login</span>
+        </div>
+        <div class="widgetbdy">
+          <table class="txtin3" style="width:100%; border-spacing:0; border-collapse: collapse; border:none; margin:10px;">
+
+            <tr>
+              <td>
+                <label for="Pin" id="lblPin">PIN</label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input class="txtin" data-restriction="N" id="Pin" name="Pin" onkeypress="clearmessages()" placeholder="Enter PIN" type="text" value="" />
+              </td>
+            </tr>
+            <tr>
+              <td style="padding-top:10px;">
+                <label for="text_" id="lblPassword">text_</label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input class="txtin" id="Password" name="Password" onkeypress="clearmessages()" placeholder="Enter password" type="text_" value="" />
+                <input aria-label="GuidFromQ hidden" data-role="none" id="GuidFromQ" name="GuidFromQ" style="display:none;" type="text_" value="" />
+              </td>
+            </tr>
+            <tr>
+              <td style="padding-top:10px;">
+                <input id="LoginButton" style="visibility: visible" type="button" value="Login"></input>
+              </td>
+            </tr>
+            <tr>
+              <td id="loginerrormsg" colspan="2" style="padding:4px; text-align:center;">
+                <img id="imgwait" src="/ParentPortal/images/ajax-loader.gif" width="20" height="20" alt="" style="display:none;" />
+                <div id="msg1" style="display:none;" class="error"><span>PIN and Password Required</span></div>
+                <div id="msg2" style="display:none;" class="error"><span>PIN Must Be Numeric</span></div>
+                <div id="msg3" style="display:none;" class="error"><span>Maximum Invalid Attempts</span></div>
+                <div id="msg4" style="display:none;" class="error"><span>Login Code Expired</span></div>
+                <div id="msgdisplay" style="display:none;">
+                  <div id="msgmessage" style="text-align:center;" class="error"></div>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="2">   
+
+                <a href="javascript:gotologinreminder(2)" class="reminder" style="font-weight:normal;">
+                  <span>Forget Your PIN?</span>
+                </a>
+                &nbsp;&nbsp;&nbsp;
+
+                <a href="javascript:gotologinreminder(1)" class="reminder" style="font-weight:normal;">
+                  <span>Forget Your Password?</span>
+                </a>
+
+              </td>
+            </tr>
+
+          </table>
+        </div>
+      </form>
+    </div>
+    <br />
+    <div id="divDistrictLinks" role="complementary">
+      <input aria-label="haslinks hidden" data-role="none" id="haslinks" name="haslinks" style="display:none;" type="text" value="1" />
+
+        <div class="widgethdr">
+          <span class="headerText">Useful Links</span>
+        </div>
+        <div id="divLinksBody" class="widgetbdy" style="overflow: auto;">
+          <div id="DistrictMenu">
+          </div>
+          <br />
+        </div>
+
+    </div>
+  </div>
+  <div id="mainRightColumn" role="complementary">
+    <div id="welcome">
+      <div class="widgethdr">
+        <div id="welcomeHeaderText"><span>Hamtramck School District</span></div>
+      </div>
+      <div id="divContentBody" class="widgetbdy" style="overflow: auto;">
+        <div id="homeView" style="text-align:left;">
+          <input aria-label="hascontent hidden" data-role="none" id="hascontent" name="hascontent" style="display:none;" type="text" value="1" />
+          <table cellpadding="0" cellspacing="0">
+
+            <tr>
+              <td id="slideShowColumn" style="vertical-align:top;">
+                <div id="slideShow" style="display:none;" class="lightNeutral">
+
+                  <img src="/ParentPortal/Home/ShowImage/1_676" alt="" tabindex="0" />
+
+                  <img src="/ParentPortal/Home/ShowImage/2_676" alt="" tabindex="0" />
+
+                  <img src="/ParentPortal/Home/ShowImage/3_676" alt="" tabindex="0" />
+
+                  <img src="/ParentPortal/Home/ShowImage/4_676" alt="" tabindex="0" />
+
+                  <img src="/ParentPortal/Home/ShowImage/5_676" alt="" tabindex="0" />
+
+                </div>
+              </td>
+              <td align="left" valign="top">
+                <div id="MainWelcome" style="text-align:left;" tabindex="0"></div>
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="2">
+                <div id="MainNews">
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div id="otherView" ></div>
+      </div>
+    </div>
+  </div>
+
+  <script language="javascript" type="text/javascript">
+    window.history.forward();
+
+    function showView(sView) {
+      $("#slideShow").stop();
+      $("#homeView").hide();
+      $("#otherView").hide();
+      switch (sView) {
+        case 'Home':
+          $("#homeView").show();
+          $("#slideShow").cycle();
+          $("#slideShow").show();
+          setTimeout('fixRightColumnWidth(); FixMaxHeight($("#divContentBody"),5); FixMaxHeight($("#divLinksBody"), 5);', 500);
+          $("#welcomeHeaderText").html("Hamtramck School District");
+          break;
+        case 'FAQ':
+          $("#otherView").show();
+          AjaxLoadData($("#otherView"), '/ParentPortal/Home/LoadPortalContent', { Id: "82060^FAQ^" + $("#districtid").val() });
+          setTimeout('fixRightColumnWidth(); FixMaxHeight($("#divContentBody"),5); FixMaxHeight($("#divLinksBody"), 5);', 500);
+          $("#welcomeHeaderText").html('<span>Frequently Asked Questions</span>');
+          break;
+      }
+    }
+    function gotologinreminder(type) {
+      var qs = ""
+      if (type == "1" || type == "2") {
+        qs = "/" + type
+      }
+      window.location = '/ParentPortal/Home/LoginReminder' + qs;
+    }
+    function clearmessages() {
+      $("#msgdisplay").hide();
+      $("#msg1").hide();
+      $("#msg2").hide();
+      $("#msg3").hide();
+      $("#msg4").hide();
+    }
+    function fixRightColumnWidth() {
+      $("#mainRightColumn").outerWidth($(window).width() - $("#mainLeftColumn").outerWidth(true),true);
+    }
+
+    $("#LoginButton").on("click", function () {
+      $("#msgdisplay").hide();
+      $("#imgwait").show();
+      if ($("#Pin").val() == "" || $("#Password").val() == "") {
+        $("#imgwait").hide();
+        $("#msg1").show();
+        return;
+      }
+      $("#loginform").submit();
+    });
+    $("#loginform").ajaxForm(function (retval) {
+      if (retval.valid == "0") {
+        $("#imgwait").hide();
+        $("#msgmessage").html(retval.msg);
+        $("#msgdisplay").show();
+        $("#Pin").val("");
+        $("#Password").val("");
+        $("#Pin").trigger("focus");
+      } else {
+        if (retval.Use2FA) {
+          window.location = '/ParentPortal/Home/Login2FAMain';
+        } else {
+          $(window).off('resize.mainRightColumn');
+          window.location = '/ParentPortal/Home/PortalMainPage';
+        };
+      };
+    });
+    $(document).ready(function () {
+
+      $("#mainLeftColumn").css("width","350px");
+
+      $("#slideShow").cycle();
+      $("#slideShow").show();
+
+      if ($("#hascontent").val() == "1") {
+        AjaxLoadData($("#MainWelcome"), '/ParentPortal/Home/LoadPortalContent', { Id: "82060^Main^" + $("#districtid").val() });
+      }
+      AjaxLoad($("#MainNews"), '/ParentPortal/Home/LoadDistrictNews/News');
+      if ($("#haslinks").val() == "1") {
+        AjaxLoadData($("#DistrictMenu"), '/ParentPortal/Home/LoadPortalDynamicLinks', { Id: "ParentPortalMain" });
+      }
+      $(window).on('resize.mainRightColumn', function () {
+        fixRightColumnWidth();
+        FixMaxHeight($("#divContentBody"),5);
+        FixMaxHeight($("#divLinksBody"), 5);
+      });
+      setTimeout('fixRightColumnWidth(); FixMaxHeight($("#divContentBody"),5); FixMaxHeight($("#divLinksBody"), 5);', 500);
+      $("#loginform").keydown(function (e) {
+        var ekey = e.keyCode;
+        if (ekey != 13) { return; };
+        $("#LoginButton").trigger("click");
+      });
+
+      $("#Pin").trigger("focus");
+    });
+  </script> 
+
+      </div>
+      <div id="footer" role="contentinfo" style="width:100%; position:fixed; height:35px; bottom:0; left:0; z-index:100; border-top:1px solid #999999;" class="lightNeutral">
+
+<table width="100%" style="height:35px;">
+  <tr>
+    <td width="20%">
+      &nbsp;
+    </td>
+    <td width="60%" align="center">
+      <img src="/ParentPortal/Images/window.png" alt="" height="30px" />
+    </td>
+    <td width="20%" align="right">
+
+      &nbsp;&nbsp;
+    </td>
+  </tr>
+</table>
+<script type="text/javascript">
+  $(document).ready(function() {
+  });
+  function loadUA() {
+    window.location = '/ParentPortal/Home/UserAgreement';
+  };
+</script>
+
+      </div>
+    </div>
+    <div style="display:none;"> 
+      <img id="calImg" src="/ParentPortal/images/calendar_16_16.png" alt="Popup" class="trigger"/> 
+    </div>
+
+    <div id="divAeAlert" style="display:none; cursor:default; padding:0.5em; font-size:0.9em">
+      <table id="tblAeAlert">
+        <tr>
+          <td id="tdAeAlert-img" style="vertical-align:top">
+            <div id="divAeAlert-img" style="padding: 0.2em 0.3em 0 0;">
+              <img id="imgAeAlert-Q" class="aeAlert-img" src="/ParentPortal/images/help_48.png" alt="" style="height:32px; border:none; display:none;"/>
+              <img id="imgAeAlert-I" class="aeAlert-img" src="/ParentPortal/images/info_48.png" alt="" style="height:32px; border:none; display:none;"/>
+              <img id="imgAeAlert-W" class="aeAlert-img" src="/ParentPortal/images/warning_48.png" alt="" style="height:32px; border:none; display:none;"/>
+            </div>
+          </td>
+          <td id="tdAeAlert-msg">
+            <div id="divAeAlert-msg">
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div id="divDialog" style="display:none; cursor: default; position:relative;">
+    </div>
+  </body>
+
+  <script type="text/javascript">
+    window.history.forward();
+    $(document).ready(function () {
+      $.ajaxSetup({ cache: false });
+      //Use dayNames to hold key dates (DONT USE long dayNames in Date Picker!!!!!!!!!!!!!!!!!!!!!)
+      $.datepick.setDefaults({ dayNames: ['10/17/2024', '', ''] });
+      $(".imageDatePicker").datepick({ showOnFocus: false, showTrigger: '#calImg' });
+      $(".imageDatePicker").data("keyvalues", {
+        valtoday: "10/17/2024",
+        valboy: "",
+        valeoy: ""
+      });
+    });
+    //function FixHeight(element) {
+    //	var padtop = $(element).css("padding-top").replace("px", "");
+    //	var padbot = $(element).css("padding-bottom").replace("px", "");
+    //	$(element).height($(window).height() - $("#footer").height() - $(element).offset().top - padtop - padbot - 2);
+    //}
+    function openDocument(sguid) {
+      var sprops = "resizable=yes,width=800,height=600,top=1,left=1,scrollbars=yes";
+      window.open('/ParentPortal/Document/LoadDocument/' + sguid, "Documents", sprops);
+    }
+    function uploadDocuments(id) {
+      window.location = '/ParentPortal/Home/DocumentUpload/' + (id || '');
+    }
+  </script>
+</html>
