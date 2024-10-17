@@ -1,0 +1,284 @@
+$(function() {
+
+    // Expand Menu Panel when user hovers over MENU button on dropdown menu.
+
+    $("#open").mouseover(function() {
+        $("div#panel").slideDown("normal");
+    });
+
+    // Collapse Menu Panel when the user moves the mouse out of the dropdown menu panel.
+
+    $("div#panel").hover(
+        function() {
+        },
+        function() {
+            $(this).slideUp("normal");
+        }
+    );
+
+});
+
+// Catch AJAX Errors on ANY $.Post in Q that returns JSON. 
+// Used to process unhandled exceptions that occur during AJAX callback. Strip off first 5 characters '*ERR*' to get url and parms for ErrorPage.
+//$(document).ajaxError(function(e, xhr, settings, exception) {
+//    window.location.href = xhr.responseText.substring(5);
+//});
+$.ajaxSetup({
+	error: function (XMLHttpRequest) {
+		if (XMLHttpRequest.responseText.substr(0, 5) == "*ERR*") {
+			window.location.href = XMLHttpRequest.responseText.substring(5);
+		}
+	}
+});
+
+// AjaxLoad returns a string of HTML.  It will NOT execute the error event because we are trapping errors in our Error Handler.
+// Therefore, check the start of the response html string that is returned to see if we encountered and error.
+function AjaxLoad(Destination, UrlString) {
+    var shtml = "<center><div class='bigmsg' id='waitdiv' style='width:100%; background-color:#ffffff'><br /><br />Loading Information...</div></center>"
+    Destination.empty().append(shtml);
+    $.ajax({ url: UrlString,
+    	cache: false,
+    	global: true,
+    	success: function (html) {
+    		// have to check for error by evaluating start of string
+    		// If the first 5 chars are *ERR*, it is an error, otherwise html returned from action
+    		if (html.substring(0, 5) == '*ERR*') {
+//    			var surl = "ErrorPage" + html.substring(15);
+    			var surl = html.substring(6);
+    			window.location.href = surl;
+    		}
+    		else {
+    			Destination.empty().append(html);
+    		}
+    	}
+    });
+}
+function AjaxLoadData(Destination, action, data, callback) {
+	var shtml = "<center><div class='bigmsg' id='waitdiv' style='width:100%; background-color:#ffffff'><br /><br />Loading Information...</div></center>"
+	Destination.empty().append(shtml);
+	$.post(action, data,
+		function (html) {
+		// have to check for error by evaluating start of string
+		// If the first 5 chars are *ERR*, it is an error, otherwise html returned from action
+			if (html.substring(0, 5) == '*ERR*') {
+				window.location.href = html.substring(5);
+			}
+			else {
+				Destination.empty().append(html);
+				if (!(callback === undefined)) {
+					callback();
+				}
+			}
+		}, "html");
+}
+function AjaxPostData(Destination, action, data, callback) {
+//    var shtml = "<center><div class='bigmsg' id='waitdiv' style='width:100%; background-color:#ffffff'><br /><br />Loading Information...</div></center>"
+//    Destination.empty().append(shtml);
+      $.post(action, data,
+		function (html) {
+		    // have to check for error by evaluating start of string
+		    // If the first 5 chars are *ERR*, it is an error, otherwise html returned from action
+		    if (html.substring(0, 5) == '*ERR*') {
+		        window.location.href = html.substring(5);
+		    }
+		    else {
+		        //Destination.empty().append(html);
+		        if (!(callback === undefined)) {
+		            callback();
+		        }
+		    }
+		}, "html");
+}
+function AjaxLoadHeight(Destination, destHeight, UrlString) {
+    $.ajax({ url: UrlString,
+        cache: false,
+        success: function(html) {
+            if (html.substring(0, 5) == '*ERR*') {
+                window.location.href = html.substring(5);
+            }
+            else {
+                Destination.empty().append(html).height(destHeight);
+            }
+        } 
+    });    
+}
+function InfoMsgAndContinue(msg, callback) {
+	if (msg > "") {
+		aeAlert(msg, "", "", callback);
+	} else {
+		if (!(callback === undefined)) callback();
+	}
+}
+function aeAlert(msg, title, imgType, callback, width) {
+	$("#divAeAlert-msg").html(msg);
+	if (title == null && imgType == null) title = "Alert";
+	if (title == null && imgType == "I") title = "Information";
+	if (title == null && imgType == "W") title = "Warning";
+	$(".aeAlert-img").hide();
+	if (imgType > "")
+		$("#imgAeAlert-" + imgType).show();
+	$("#divAeAlert").show();
+	var divWidth = 400;
+	if (!(width === undefined)) divWidth = width;
+	var divHeight = $("#divAeAlert").height();
+	$("#divAeAlert").hide();
+	if (divHeight < $(window).height() - 100) divHeight = "auto"; else divHeight = $(window).height() - 100;
+	$("#divAeAlert").dialog({
+		modal: true,
+		closeOnEscape: false,
+		dialogClass: 'no-close',
+		title: title,
+		height: divHeight,
+		width: divWidth,
+		buttons: {
+			"OK": function () {
+				$(this).dialog('destroy');
+				if (!(callback === undefined)) callback();
+			}
+		}
+	})
+	$(".ui-dialog-titlebar").css({ "padding": "0.2em 0.5em", "font-size": "0.9em" }).addClass("mediumHighlight");
+	$(".ui-dialog-buttonpane").css({ "padding": "0 0.5em", "margin": "0", "font-size": "0.9em" });
+}
+function aeConfirm(msg, title, callbackOK, callbackCancel, elemtype, elemid) {
+	$("#divAeAlert-msg").html(msg);
+	if (title == null) title = "Confirm";
+	$(".aeAlert-img").hide();
+	$("#imgAeAlert-Q").show();
+	$("#divAeAlert").show();
+	var divWidth = 400;
+	var divHeight = $("#divAeAlert").height();
+	$("#divAeAlert").hide();
+	if (divHeight < $(window).height() - 100) divHeight = "auto"; else divHeight = $(window).height() - 100;
+	$("#divAeAlert").dialog({
+		modal: true,
+		closeOnEscape: false,
+		dialogClass: 'no-close',
+		title: title,
+		height: divHeight,
+		width: divWidth,
+		buttons: {
+			"OK": function () {
+				$(this).dialog('destroy');
+				$('#' + elemtype + elemid).trigger("focus");
+				if (!(callbackOK === undefined)) callbackOK();
+			},
+			"Cancel": function () {
+				$(this).dialog('destroy');
+				$('#' + elemtype + elemid).trigger("focus");
+				if (!(callbackCancel === undefined)) callbackCancel();
+			}
+		}
+	})
+	$(".ui-dialog-titlebar").css({ "padding": "0.2em 0.5em", "font-size": "0.9em" }).addClass("mediumHighlight");
+	$(".ui-dialog-buttonpane").css({ "padding": "0 0.5em", "margin": "0", "font-size": "0.9em" });
+}
+function DisplayDialog(title, action, data, divWidth, divHeight, submitCallback, cancelCallback) {
+	AjaxLoadData($("#divDialog"), action, data);
+	var divTop = ($(window).height() - divHeight) / 2;
+	var divLeft = ($(window).width() - divWidth) / 2;
+	var oButtons = { "Cancel": function () { $(this).dialog('destroy'); if ($.isFunction(cancelCallback)) cancelCallback(); } }
+	if ($.isFunction(submitCallback))
+		oButtons.Submit = submitCallback;
+	$("#divDialog").dialog({
+		modal: true,
+		title: title,
+		height: divHeight,
+		width: divWidth,
+		buttons: oButtons,
+		open: function () { }
+	})
+	$(".ui-dialog-titlebar").css({ "padding": "0.2em 0.5em", "font-size": "0.9em" }).addClass("mediumHighlight");
+	$(".ui-dialog-buttonpane").css({ "padding": "0 0.5em", "margin": "0", "font-size": "0.9em" });
+	$(".ui-widget-overlay").on("click", function () { $("#divDialog").dialog('close'); })
+}
+function DisplayPopup(title, action, data, divWidth, divHeight, elemtype, elemid, modal) {
+	var el = (elemtype != undefined ? document.getElementById(elemtype + elemid) : this);
+	AjaxLoadData($("#divDialog"), action, data);
+	$("#divDialog").dialog({
+		modal: (modal != undefined ? modal : true),
+		title: title,
+		position: { my: 'top-10', at: (elemtype != null ? 'left-260' : 'top center'), of: $(el) },
+		width: divWidth,
+		height: divHeight
+	})
+	$(".ui-dialog-titlebar").css({ "padding": "0.2em 0.5em", "font-size": "0.9em" }).addClass("mediumHighlight");
+	$(".ui-dialog-content").css({ "padding": ".2em 0.2em", "font-size": "0.9em" });
+	$(".ui-widget-overlay").on("click", function () { $("#divDialog").dialog('destroy'); })
+}
+function checkFileSize(ctrl, maxsize) {
+	var i = document.getElementById(ctrl);
+	if (!i.files[0]) {
+		return true;
+	} else {
+		var f = i.files[0];
+		if (eval(f.size) > eval(maxsize)) {
+			return false;
+		}
+	};
+	return true;
+}
+function FixHeight(element, reservedHeight) {
+	if (element != undefined) {
+		if (isNaN(reservedHeight)) reservedHeight = 0;
+		var offtop = 0;
+		var padtop = 0;
+		var padbot = 0;
+		var bortop = 0;
+		var borbot = 0;
+		//var martop = 0;  -- margin-top is already in offset().top
+		var marbot = 0;
+		if ($(element).offset() != undefined) {
+			offtop = $(element).offset().top;
+		}
+		if ($(element).css("padding-top") != undefined) {
+			padtop = $(element).css("padding-top").replace("px", "");
+		}
+		if ($(element).css("padding-bottom") != undefined) {
+			padbot = $(element).css("padding-bottom").replace("px", "");
+		}
+		if ($(element).css("border-top-width") != undefined) {
+			bortop = $(element).css("border-top-width").replace("px", "");
+		}
+		if ($(element).css("border-bottom-width") != undefined) {
+			borbot = $(element).css("border-bottom-width").replace("px", "");
+		}
+		if ($(element).css("margin-bottom") != undefined) {
+			marbot = $(element).css("margin-bottom").replace("px", "");
+		}
+		// footer has a 1px border-top-width
+		$(element).height(Math.floor($(window).height() - ($("#footer").height() + 1) - offtop - bortop - padtop - padbot - borbot - marbot - reservedHeight));
+	};
+}
+function FixMaxHeight(element, reservedHeight) {
+	if (element != undefined) {
+		if (isNaN(reservedHeight)) reservedHeight = 0;
+		var offtop = 0;
+		var padtop = 0;
+		var padbot = 0;
+		var bortop = 0;
+		var borbot = 0;
+		//var martop = 0;  -- margin-top is already in offset().top
+		var marbot = 0;
+		if ($(element).offset() != undefined) {
+			offtop = $(element).offset().top;
+		}
+		if ($(element).css("padding-top") != undefined) {
+			padtop = $(element).css("padding-top").replace("px", "");
+		}
+		if ($(element).css("padding-bottom") != undefined) {
+			padbot = $(element).css("padding-bottom").replace("px", "");
+		}
+		if ($(element).css("border-top-width") != undefined) {
+			bortop = $(element).css("border-top-width").replace("px", "");
+		}
+		if ($(element).css("border-bottom-width") != undefined) {
+			borbot = $(element).css("border-bottom-width").replace("px", "");
+		}
+		if ($(element).css("margin-bottom") != undefined) {
+			marbot = $(element).css("margin-bottom").replace("px", "");
+		}
+		// footer has a 1px border-top-width
+		$(element).css("max-height", (Math.floor($(window).height() - ($("#footer").height() + 1) - offtop - bortop - padtop - padbot - borbot - marbot - reservedHeight)) + "px");
+	};
+}
